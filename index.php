@@ -16,6 +16,8 @@
         </div>
         <div>
             <?php
+
+            echo "bonjour";
             include ('ConfigDB.php');
             $reponse = $bdd->query('SELECT * FROM Requests');
 
