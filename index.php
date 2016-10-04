@@ -23,17 +23,18 @@ include ('ConfigDB.php');
             echo "bonjour";
             $reponse = $bdd->query('SELECT * FROM Requests');
             echo '<table class="table table-bordered" style="width: 75%">';
+            echo '<thead>';
+            echo '<tr>';
+            echo '<th>Titre</th>';
+            echo '<th>Description</th>';
+            echo '<th>Date</th>';
+            echo '<th>Departement</th>';
+            echo '</tr>';
+            echo '</thead>';
 
             while($donnees = $reponse->fetch())
             {
-                echo '<thead>';
-                echo '<tr>';
-                echo '<th>Titre</th>';
-                echo '<th>Description</th>';
-                echo '<th>Date</th>';
-                echo '<th>Departement</th>';
-                echo '</tr>';
-                echo '</thead>';
+
                 echo '<tbody>';
 
                 echo '<td>'.$donnees['Title'].'</td>';
