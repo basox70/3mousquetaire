@@ -16,6 +16,7 @@
         </div>
         <div>
             <?php
+            include ('ConfigDB.php');
             $reponse = $bdd->query('SELECT * FROM Requests');
 
             while($donnees = $reponse->fetch())
