@@ -6,14 +6,13 @@
         <link href="css/bootstrap.css" rel="stylesheet">
     </head>
     <body>
-        <div>
+        <div class="page-header">
             <div class="">
                 <h1><a href="index.php" alt="Yardim" class="">Yardim</a></h1>
             </div>
-            <div class="btn">
+            <div>
                 Connexion
             </div>
-            <p> bonjour</p>
         </div>
         <div>
             <?php
