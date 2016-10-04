@@ -22,12 +22,12 @@ include ('ConfigDB.php');
 
             echo "bonjour";
             $reponse = $bdd->query('SELECT * FROM Requests');
-            echo "ok";
+            echo '<table class="table table-bordered">';
 
             while($donnees = $reponse->fetch())
             {
 
-                echo '<table class="table table-bordered">';
+
                 echo '<thead>';
                 echo '<tr>';
                 echo '<th>Title</th>';
@@ -44,10 +44,9 @@ include ('ConfigDB.php');
                 echo '<td>'.$donnees['PhoneNumber'].'</td>';
                 echo '</tbody>';
                 echo '<tfoot></tfoot>';
-                echo '</table>';
-            }
 
-            echo 'ok';
+            }
+            echo '</table>';
 
             ?>
 
