@@ -13,6 +13,7 @@
             <div class="btn">
                 Connexion
             </div>
+            <p> bonjour</p>
         </div>
         <div>
             <?php
