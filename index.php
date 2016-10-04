@@ -26,8 +26,6 @@ include ('ConfigDB.php');
 
             while($donnees = $reponse->fetch())
             {
-
-
                 echo '<thead>';
                 echo '<tr>';
                 echo '<th>Title</th>';
