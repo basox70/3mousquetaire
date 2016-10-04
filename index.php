@@ -6,7 +6,7 @@
         <link href="css/bootstrap.css" rel="stylesheet">
     </head>
     <body>
-        <div class="page-header">
+        <div>
             <div class="">
                 <h1><a href="index.php" alt="Yardim" class="">Yardim</a></h1>
             </div>
