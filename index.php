@@ -46,6 +46,8 @@ include ('ConfigDB.php');
                 echo '</table>';
             }
 
+            echo 'ok';
+
             ?>
 
         </div>
