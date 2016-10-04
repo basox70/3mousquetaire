@@ -10,6 +10,7 @@
             <div class="">
                 <h1><a href="index.php" alt="Yardim" class="">Yardim</a></h1>
                 <p> Coucou c'est un test</p>
+                <p>another try</p>
             </div>
         </div>
 
