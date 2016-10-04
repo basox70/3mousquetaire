@@ -15,6 +15,33 @@
             </div>
         </div>
         <div>
+            <?php
+            $reponse = $bdd->query('SELECT * FROM Requests');
+
+            while($donnees = $reponse->fetch())
+            {
+
+                echo '<table class="table table-bordered">';
+                echo '<thead>';
+                echo '<tr>';
+                echo '<th>Title</th>';
+                echo '<th>Description</th>';
+                echo '<th>Mail</th>';
+                echo '<th>PhoneNumber</th>';
+                echo '</tr>';
+                echo '</thead>';
+                echo '<tbody>';
+
+                echo '<td>'.$donnees['Title'].'</td>';
+                echo '<td>'.$donnees['Description'].'</td>';
+                echo '<td>'.$donnees['Mail'].'</td>';
+                echo '<td>'.$donnees['PhoneNumber'].'</td>';
+                echo '</tbody>';
+                echo '<tfoot></tfoot>';
+                echo '</table>';
+            }
+
+            ?>
 
         </div>
     </body>
