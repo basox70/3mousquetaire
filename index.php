@@ -1,3 +1,6 @@
+<?php
+include ('ConfigDB.php');
+?>
 <html>
     <head>
         <meta charset="utf-8"/>
@@ -18,7 +21,6 @@
             <?php
 
             echo "bonjour";
-            include ('ConfigDB.php');
             $reponse = $bdd->query('SELECT * FROM Requests');
 
             while($donnees = $reponse->fetch())
