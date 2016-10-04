@@ -22,24 +22,24 @@ include ('ConfigDB.php');
 
             echo "bonjour";
             $reponse = $bdd->query('SELECT * FROM Requests');
-            echo '<table class="table table-bordered">';
+            echo '<table class="table table-bordered" style="width: 75%">';
 
             while($donnees = $reponse->fetch())
             {
                 echo '<thead>';
                 echo '<tr>';
-                echo '<th>Title</th>';
+                echo '<th>Titre</th>';
                 echo '<th>Description</th>';
-                echo '<th>Mail</th>';
-                echo '<th>PhoneNumber</th>';
+                echo '<th>Date</th>';
+                echo '<th>Departement</th>';
                 echo '</tr>';
                 echo '</thead>';
                 echo '<tbody>';
 
                 echo '<td>'.$donnees['Title'].'</td>';
                 echo '<td>'.$donnees['Description'].'</td>';
-                echo '<td>'.$donnees['Mail'].'</td>';
-                echo '<td>'.$donnees['PhoneNumber'].'</td>';
+                echo '<td>'.$donnees['Date'].'</td>';
+                echo '<td>'.$donnees['Departement'].'</td>';
                 echo '</tbody>';
                 echo '<tfoot></tfoot>';
 
