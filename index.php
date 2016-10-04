@@ -22,6 +22,7 @@ include ('ConfigDB.php');
 
             echo "bonjour";
             $reponse = $bdd->query('SELECT * FROM Requests');
+            echo "ok";
 
             while($donnees = $reponse->fetch())
             {
