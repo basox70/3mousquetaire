@@ -11,14 +11,6 @@ $department = $_POST['department'];
 $pass = $_POST['pass'];
 
 
-echo $prenom;
-echo $nom;
-echo $mail;
-echo $birthDate;
-echo $city;
-echo $department;
-echo $pass;
-
 $pass_hache = sha1($_POST['pass']);
 
 echo $pass_hache;
@@ -36,4 +28,7 @@ $req->execute(array(
     'pass' => $pass_hache));
 if (isset($erreur)) echo '<br />',$erreur;
 
-echo"ok";
+
+echo "Vous êts bien inscrit au site";
+
+echo '<a href = "index.php"> Retour à l\'accueil </a> ';
