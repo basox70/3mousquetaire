@@ -18,19 +18,29 @@ include ('ConfigDB.php');
     </div>
 </div>
 
-        <div>
-        <?php
-            echo $_GET['id']; // Récupération de l'ID dans l'URL
+<div>
+    <?php
+    echo $_GET['id']; // Récupération de l'ID dans l'URL
+    $reponse = $bdd->query('SELECT * FROM Requests WHERE Id ='.$_GET['id']);
 
-            $reponse = $bdd->query('SELECT * FROM Requests WHERE Id ='.$_GET['id']);
-            while ($donnees = $reponse->fetch()) {
-                echo '<div class="row">';
-                echo '<div class="col-sm-4">Titre</div>';
-                echo '<div class="col-sm-8">'.$donnees['Title'].'</div>';
-                echo '</div>';
-            }
+    echo '<div class = "container">';
 
-        ?>
+    while ($donnees = $reponse->fetch()) {
+        echo '<div class="row">';
+        echo '<div class="col-sm-1"></div>';
+        echo '<div class="col-sm-3">Titre</div>';
+        echo '<div class="col-sm-6">'.$donnees['Title'].'</div>';
+        echo '</div>';
+    }
+
+
+
+
+
+
+    echo '</div>';
+
+    ?>
 </div>
 </body>
 </html>
