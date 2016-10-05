@@ -1,6 +1,8 @@
 <?php
 include ('ConfigDB.php');
 ?>
+
+
 <html>
     <head>
         <meta charset="utf-8"/>
@@ -28,6 +30,11 @@ include ('ConfigDB.php');
                 <button class="btn btn-default">Etudiant ? Postez votre offre .. </button>
             </div>
             <?php
+
+            echo date('d/m/Y');
+
+
+
             $reponse = $bdd->query('SELECT * FROM Requests');
             echo '<table class="table table-bordered" style="width: 75%">';
             echo '<thead>';
