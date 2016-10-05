@@ -35,10 +35,13 @@ $pass = $_POST['pass'];
 $pass_confirm = $_POST['pass_confirm'];
 
 $pass_hache = sha1($_POST['pass']);
+$pass_hache2 = sha1($_POST['pass_confirm']);
 
 echo $pass_hache;
 echo '<br />';
 echo $pass;
+echo '<br />';
+echo $pass_hache2;
 
 
 
