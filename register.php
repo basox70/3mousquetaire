@@ -18,10 +18,10 @@
     <div>
         Connexion
     </div>
-    <div><a href="registerConfirm.php">Inscription</a></div>
+    <div><a href="register.php">Inscription</a></div>
 
         Inscription à l'espace membre :<br />
-        <form action="inscription.php" method="post">
+        <form action="registerConfirmation.php" method="post">
             Prénom : <input type="text" name="name" value=""><br />
             Nom : <input type="text" name="surname" value=""><br />
             Mail : <input type="email" name="email" value=""><br />
