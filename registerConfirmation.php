@@ -32,6 +32,8 @@ $city = $_POST['city'];
 $department = $_POST['department'];
 
 $pass = $_POST['pass'];
+$pass_confirm = $_POST['pass_confirm'];
+
 $pass_hache = sha1($_POST['pass']);
 
 echo $pass_hache;

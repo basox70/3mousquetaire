@@ -33,7 +33,7 @@
             <input type="submit" name="inscription" value="Inscription">
         </form>
 <?php
-$pass_hache = sha1($_POST['pass']);
+echo $_GET['name'];
 
 
 ?>
