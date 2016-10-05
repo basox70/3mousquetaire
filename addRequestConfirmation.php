@@ -48,9 +48,9 @@ $req = $bdd->prepare('INSERT INTO Requests(Title, Mail, PhoneNumber, Description
 
 if (isset($erreur)) echo '<br />',$erreur;
 
-if(date('d/m/Y') > '06/06/2014')
+if(date('d/m/Y') >= $date)
 
-    echo 'Error';
+    echo "Erreur sur la date ";
 
 else
 
