@@ -12,6 +12,12 @@ session_start();
     </head>
     <body>
         <div class="page-header">
+            <?php
+            if(session_id() && $_SESSION['datas']['Admin']=='1')
+            {
+                echo "<a class=\"admin\" href\"admin.php\">Administration</a>";
+            }
+            ?>
             <div class="image"><img src="img/logo-simple.png"></div>
             <div class="banner">
                 <h1><a href="index.php" class="">Yardim</a></h1>
@@ -22,33 +28,34 @@ session_start();
             <div class="connect">
             <?php
             if(!$_SESSION)
-            { echo "<a class=\"btn btn-primary\" href='connect.php'>Connexion</a>&nbsp;&nbsp;<a class=\"btn btn-primary\" href=\"register.php\">Inscription</a>"; }
+            { echo "<a class=\"btn btn-primary\" href='connect.php'>Connexion</a> <a class=\"btn btn-primary\" href=\"register.php\">Inscription</a>"; }
             else
             {
                 echo "Bienvenue ".$_SESSION['datas']['Name'];
-                echo "&nbsp;&nbsp;<a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a>";
+                echo " <a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a>";
             } ?>
             </div>
         </div>
         <div>
 
             <div class = "button_add_request">
-                <button class ="btn btn-default"><a href = "addRequest.php">Ajouter une Annonce .. </a></button>
+                <button class ="btn btn-default"><a href = "addRequest.php">Ajouter une annonce .. </a></button>
             </div>
 
             <div class = "button_student_offers">
                 <button class="btn btn-default">Etudiant ? Postez votre offre .. </button>
             </div>
+
             <div class="search">
-                <form method="post" action="#">
+                <form class="form-inline" method="post" action="#">
                     <p>
                         <label for="type">Je recherche</label><br />
-                        <select name="type" id="type">
+                        <select class="form-control" name="type" id="type">
                             <option value="both">Les offres et les demandes</option>
                             <option value="requests">les demandes</option>
                             <option value="offers">les offres</option>
                         </select>
-                        <select name="categorie" id="categorie">
+                        <select class="form-control" name="categorie" id="categorie">
                             <option value="all">Toutes catégories</option>
                             <?php
                                 $categories = $bdd->query('SELECT * FROM Category');
@@ -57,11 +64,11 @@ session_start();
                                 }
                             ?>
                         </select>
-                        <select name="location" id="locations">
+                        <select class="form-control" name="location" id="locations">
                             <option value="Departement">Tous départements</option>
                             <?php echo $departments; ?>
                         </select>
-                        <select>
+                        <select class="form-control">
                             <option value="Ville">Toutes Villes</option>
                             <?php
                             $cities = $bdd->query("SELECT DISTINCT(City) FROM Requests UNION SELECT DISTINCT(City) FROM User");

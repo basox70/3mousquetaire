@@ -16,6 +16,11 @@ html
     font-family: '');
     src: url('');*/
 }
+.admin
+{
+    position: absolute;
+    margin: 20px 0px 0 50em;
+}
 .page-header
 {
     margin : -20px 0px 20px;
@@ -58,7 +63,8 @@ html
 }
 .connect
 {
-
+    float: left;
+    margin: 0 0 0px 21em;
 }
 .search select
 {
