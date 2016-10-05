@@ -27,7 +27,7 @@ include ('ConfigDB.php');
 
     while ($donnees = $reponse->fetch()) {
         echo '<div class="row">';
-        echo '<div class="col-sm-1"></div>';
+        echo '<div class="col-sm-1">test</div>';
         echo '<div class="col-sm-3">Titre</div>';
         echo '<div class="col-sm-6">'.$donnees['Title'].'</div>';
         echo '</div>';
