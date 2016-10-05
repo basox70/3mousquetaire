@@ -1,5 +1,5 @@
 <?php
-require('ConfigDB.php');
+require('Config.php');
 session_start();
 if(isset($_POST['mail']))
 {

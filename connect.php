@@ -4,7 +4,7 @@ session_start();
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Yardim - Accueil</title>
+        <title>Yardim - Connexion</title>
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">

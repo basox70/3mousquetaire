@@ -1,5 +1,5 @@
 <?php
-include ('ConfigDB.php');
+include('Config.php');
 session_start();
 ?>
 <html>
@@ -39,11 +39,45 @@ session_start();
             <div class = "button_student_offers">
                 <button class="btn btn-default">Etudiant ? Postez votre offre .. </button>
             </div>
+            <div class="search">
+                <form method="post" action="#">
+                    <p>
+                        <label for="type">Je recherche</label><br />
+                        <select name="type" id="type">
+                            <option value="both">Les offres et les demandes</option>
+                            <option value="requests">les demandes</option>
+                            <option value="offers">les offres</option>
+                        </select>
+                        <select name="categorie" id="categorie">
+                            <option value="all">Toutes catégories</option>
+                            <?php
+                                $categories = $bdd->query('SELECT * FROM Category');
+                                while ($category = $categories->fetch()) {
+                                    echo "<option value=".$category['Name'].">".$category['Name']."</option>";
+                                }
+                            ?>
+                        </select>
+                        <select name="location" id="locations">
+                            <option value="Departement">Tous départements</option>
+                            <?php echo $departments; ?>
+                        </select>
+                        <select>
+                            <option value="Ville">Toutes Villes</option>
+                            <?php
+                            $cities = $bdd->query("SELECT DISTINCT(City) FROM Requests UNION SELECT DISTINCT(City) FROM User");
+                            while ($city = $cities->fetch()) {
+                                echo "<option value=".$city['City'].">".$city['City']."</option>";
+                            }
+                            ?>
+                        </select>
+                        <button class="btn btn-primary">RECHERCHER</button>
+                        </select>
+                    </p>
+                </form>
+            </div>
+
             <?php
-
             echo date('Y-m-d');
-
-
 
             $reponse = $bdd->query('SELECT * FROM Requests');
             echo '<table class="table table-bordered" style="width: 75%">';
@@ -69,7 +103,6 @@ session_start();
                 echo '<td>'.$donnees['Department'].'</td>';
                 echo '<td><a href = "requests.php?id='.$donnees['Id'].'">J\'y vais</a></td>';
                 echo '</tr>';
-                echo '<tfoot></tfoot>';
 
             }
             echo '</table>';

@@ -51,13 +51,15 @@ html
     float: left;
     margin:0 0 0 -24em;
 }
-
 .description h4
 {
     text-align: center;
     font-family: 'bender-inline';
 }
+.connect
+{
 
+}
 .search select
 {
     margin-right: 20px;

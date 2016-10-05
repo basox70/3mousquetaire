@@ -1,5 +1,5 @@
 <?php
-include "ConfigDB.php";
+include "Config.php";
 ?>
 
 <html>
