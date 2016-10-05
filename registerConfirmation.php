@@ -37,14 +37,6 @@ $pass_confirm = $_POST['pass_confirm'];
 $pass_hache = sha1($_POST['pass']);
 $pass_hache2 = sha1($_POST['pass_confirm']);
 
-echo $pass_hache;
-echo '<br />';
-echo $pass;
-echo '<br />';
-echo $pass_hache2;
-
-
-
 // Insertion
 $req = $bdd->prepare('INSERT INTO User(Name, Surname, Mail, BirthDate, City, Department, Password)
                     VALUES(:name, :surname, :mail, :birthDate, :city, :department, :pass)');
