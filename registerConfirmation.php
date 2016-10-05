@@ -20,7 +20,7 @@ include "ConfigDB.php";
     <div><a href="register.php">Inscription</a></div>
 </div>
 <div>
-    
+
     <?php
 
 
@@ -30,23 +30,27 @@ $mail = $_POST['email'];
 $birthDate = $_POST['birthDate'];
 $city = $_POST['city'];
 $department = $_POST['department'];
+
 $pass = $_POST['pass'];
-
-
 $pass_hache = sha1($_POST['pass']);
+
+echo $pass_hache;
+echo '<br />';
+echo $pass;
+
 
 
 // Insertion
 $req = $bdd->prepare('INSERT INTO User(Name, Surname, Mail, BirthDate, City, Department, Password)
                     VALUES(:name, :surname, :mail, :birthDate, :city, :department, :pass)');
-$req->execute(array(
+/*$req->execute(array(
     'name' => $prenom,
     'surname' => $nom,
     'mail' => $mail,
     'birthDate' => $birthDate,
     'city' => $city,
     'department' => $department,
-    'pass' => $pass_hache));
+    'pass' => $pass_hache));*/
 if (isset($erreur)) echo '<br />',$erreur;
 
 
