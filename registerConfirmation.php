@@ -56,9 +56,14 @@ $req = $bdd->prepare('INSERT INTO User(Name, Surname, Mail, BirthDate, City, Dep
     'city' => $city,
     'department' => $department,
     'pass' => $pass_hache));*/
-if (isset($erreur)) echo '<br />',$erreur;
-
-
-echo "Vous êts bien inscrit au site";
-
-echo '<a href = "index.php"> Retour à l\'accueil </a> ';
+    if (isset($erreur)) echo '<br />',$erreur;
+    if($pass_hache == $pass_hache2)
+    {
+        echo 'Félicitations, vous êtes désormais un nouvel acteur de Yardim ! ';
+        echo '<a href = "index.php"> Retour à l\'accueil </a> ';
+    }
+    else
+    {
+        echo 'Les Mots de passes ne concordent pas. Veuillez Réessayer.';
+        echo '<a href = "index.php">Retour au formulaire d\'inscription</a>';
+    }
