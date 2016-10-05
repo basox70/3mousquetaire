@@ -42,7 +42,7 @@ include ('ConfigDB.php');
                 echo '<td>'.$donnees['Description'].'</td>';
                 echo '<td>'.$donnees['Date'].'</td>';
                 echo '<td>'.$donnees['Department'].'</td>';
-                echo '<td><a href = "requests.php">J\'y vais</a></td>';
+                echo '<td><a href = "requests.php"'.$donnees['Id'].'>J\'y vais</a></td>';
                 echo '</tbody>';
                 echo '<tfoot></tfoot>';
 
