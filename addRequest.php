@@ -25,7 +25,7 @@ include "ConfigDB.php";
         Proposer une nouvelle annonce ..
     <form action="registerConfirmation.php" method="post">
         Titre : <input type="text" name="title" value=""><br />
-        Description : <input type="text" size="200" name="description" value=""><br />
+        Description : <input type="text" size="200" style="display: block" name="description" value=""><br />
         Email : <input type="email" name="email" value=""><br />
         Numéro de téléphone : * <input type="text" size="10" name="number" value=""><br />
         Votre nom :  <input type = "text" name = "name" value = ""><br />
