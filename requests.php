@@ -55,6 +55,10 @@ include ('ConfigDB.php');
         echo '<div class="col-sm-3">Pseudo</div>';
         echo '<div class="col-sm-6">'.$donnees['Nickname'].'</div>';
         echo '</div>';
+
+
+        echo '<button class="btn btn-success">J\'envoie</button>';
+        echo '<button class="btn btn-warning"><a href="index.php">Page Précedente</a></button>';
     }
 
 
