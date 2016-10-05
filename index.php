@@ -40,7 +40,7 @@ include ('ConfigDB.php');
                 echo '<td>'.$donnees['Title'].'</td>';
                 echo '<td>'.$donnees['Description'].'</td>';
                 echo '<td>'.$donnees['Date'].'</td>';
-                echo '<td>'.$donnees['Departement'].'</td>';
+                echo '<td>'.$donnees['Department'].'</td>';
                 echo '</tbody>';
                 echo '<tfoot></tfoot>';
 
