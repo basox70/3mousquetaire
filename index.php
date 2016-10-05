@@ -25,7 +25,7 @@ include ('ConfigDB.php');
             </div>
 
             <div class = "button_student_offers">
-                <button class="btn btn-block">Etudiant ? Postez votre offre .. </button>
+                <button class="btn btn-default">Etudiant ? Postez votre offre .. </button>
             </div>
             <?php
 
