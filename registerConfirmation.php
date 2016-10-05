@@ -40,19 +40,20 @@ $pass_hache2 = sha1($_POST['pass_confirm']);
 // Insertion
 $req = $bdd->prepare('INSERT INTO User(Name, Surname, Mail, BirthDate, City, Department, Password)
                     VALUES(:name, :surname, :mail, :birthDate, :city, :department, :pass)');
-/*$req->execute(array(
-    'name' => $prenom,
-    'surname' => $nom,
-    'mail' => $mail,
-    'birthDate' => $birthDate,
-    'city' => $city,
-    'department' => $department,
-    'pass' => $pass_hache));*/
+
     if (isset($erreur)) echo '<br />',$erreur;
     if($pass_hache == $pass_hache2)
     {
         echo 'Félicitations, vous êtes désormais un nouvel acteur de Yardim ! ';
         echo '<a href = "index.php"> Retour à l\'accueil </a> ';
+        $req->execute(array(
+            'name' => $prenom,
+            'surname' => $nom,
+            'mail' => $mail,
+            'birthDate' => $birthDate,
+            'city' => $city,
+            'department' => $department,
+            'pass' => $pass_hache));
     }
     else
     {
