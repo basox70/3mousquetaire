@@ -19,3 +19,7 @@ echo $birthDate;
 echo $city;
 echo $department;
 echo $pass;
+
+$pass_hache = sha1($_POST['pass']);
+
+echo $pass_hache;
