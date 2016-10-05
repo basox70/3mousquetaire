@@ -15,11 +15,18 @@
     <p>Se connecter</p>
     <div>
         <form action="#" method="post">
-            <p><label for='Mail'>Mail :</label> <input class="" type="email" name="Mail" placeholder="mail@example.com"/></p>
-            <p><label for="Password">Mot de passe :</label> <input class="" type="password" name="Password" placeholder="Password"/></p>
+            <div class="form-group row">
+                <label for='Mail'>Mail :</label>
+                <input class="form-control" type="email" id="Mail" placeholder="mail@example.com"/>
+            </div>
+            <div class="form-group row">
+                <label for="Password">Mot de passe :</label>
+                <input class="form-control" type="password" id="Password" placeholder="Password"/>
+            </div>
             <input type="submit" value="Connexion"/>
         </form>
-        <button href="#">Pas encore de compte</button>
+
+        <button class="btn btn-primary" href="#">Pas encore de compte</button>
 
     </div>
 </div>
