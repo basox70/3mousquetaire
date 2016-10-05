@@ -52,6 +52,8 @@ include "ConfigDB.php";
             'department' => $department,
             'name' => $name));
 
+        echo $req;
+
         echo "Votre annonce a bien été ajouté. Vous pouvez la retrouver dès maintenant sur la page d'accueil.";
         echo '<a href = "index.php"> Retour à l\'accueil </a> ';
 
