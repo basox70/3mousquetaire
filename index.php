@@ -31,7 +31,7 @@ include ('ConfigDB.php');
             </div>
             <?php
 
-            echo date('d/m/Y');
+            echo date('Y-m-d');
 
 
 
