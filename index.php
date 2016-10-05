@@ -16,6 +16,7 @@ include ('ConfigDB.php');
             <div>
                 Connexion
             </div>
+            <div><a href="register.php">Inscription</a></div>
         </div>
         <div>
             <?php
@@ -35,7 +36,6 @@ include ('ConfigDB.php');
 
             while($donnees = $reponse->fetch())
             {
-
                 echo '<tr>';
 
                 echo '<td>'.$donnees['Id'].'</td>';

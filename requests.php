@@ -39,21 +39,21 @@ include ('ConfigDB.php');
         echo '</div>';
 
         echo '<div class="row">';
-        echo '<div class="col-sm-1">test</div>';
-        echo '<div class="col-sm-3">Adresse Email de Contact</div>';
-        echo '<div class="col-sm-6">'.$donnees['Mail'].'</div>';
+            echo '<div class="col-sm-1">test</div>';
+            echo '<div class="col-sm-3">Adresse Email de Contact</div>';
+            echo '<div class="col-sm-6">'.$donnees['Mail'].'</div>';
         echo '</div>';
 
         echo '<div class="row">';
-        echo '<div class="col-sm-1">test</div>';
-        echo '<div class="col-sm-3">A effectuer le :</div>';
-        echo '<div class="col-sm-6">'.$donnees['Date'].'</div>';
+            echo '<div class="col-sm-1">test</div>';
+            echo '<div class="col-sm-3">A effectuer le :</div>';
+            echo '<div class="col-sm-6">'.$donnees['Date'].'</div>';
         echo '</div>';
 
         echo '<div class="row">';
-        echo '<div class="col-sm-1">test</div>';
-        echo '<div class="col-sm-3">Pseudo</div>';
-        echo '<div class="col-sm-6">'.$donnees['Nickname'].'</div>';
+            echo '<div class="col-sm-1">test</div>';
+            echo '<div class="col-sm-3">Pseudo</div>';
+            echo '<div class="col-sm-6">'.$donnees['Nickname'].'</div>';
         echo '</div>';
 
 
