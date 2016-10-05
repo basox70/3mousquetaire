@@ -26,6 +26,7 @@ include ('ConfigDB.php');
             echo '<table class="table table-bordered" style="width: 75%">';
             echo '<thead>';
             echo '<tr>';
+            echo '<th></th>';
             echo '<th>Titre</th>';
             echo '<th>Description</th>';
             echo '<th>Date</th>';
