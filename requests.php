@@ -1,2 +1,2 @@
 <?php
-echo $_GET['Id'];
+echo $_POST['Id'];
