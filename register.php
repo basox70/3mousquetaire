@@ -130,7 +130,7 @@
                             <option value="973">Guyane</option>
                             <option value="974">La Réunion</option>
                             <option value="975">Mayotte</option>
-                            </select>
+                            </select> <br />
 
             Mot de passe : <input type="password" name="pass" value=""><br />
             Confirmation du mot de passe : <input type="password" name="pass_confirm" value=""><br />
