@@ -17,5 +17,12 @@ include ('ConfigDB.php');
         Connexion
     </div>
 </div>
-<?php
-    echo $_GET['id'];
+
+        <div>
+        <?php
+            echo $_GET['id'];
+
+        ?>
+</div>
+</body>
+</html>
