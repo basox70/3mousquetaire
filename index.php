@@ -36,7 +36,7 @@ include ('ConfigDB.php');
             while($donnees = $reponse->fetch())
             {
 
-                echo '<tbody>';
+                echo '<tr>';
 
                 echo '<td>'.$donnees['Id'].'</td>';
                 echo '<td>'.$donnees['Title'].'</td>';
@@ -44,7 +44,7 @@ include ('ConfigDB.php');
                 echo '<td>'.$donnees['Date'].'</td>';
                 echo '<td>'.$donnees['Department'].'</td>';
                 echo '<td><a href = "requests.php?id='.$donnees['Id'].'">J\'y vais</a></td>';
-                echo '</tbody>';
+                echo '</tr>';
                 echo '<tfoot></tfoot>';
 
             }
