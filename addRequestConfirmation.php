@@ -35,8 +35,6 @@ include "ConfigDB.php";
     $req = $bdd->prepare('INSERT INTO Requests(Title, Mail, PhoneNumber, Description, Date, Department, City, Nickname)
                                         VALUES(:title, :email, :number, :description, :date, :department, :city, :name)');
 
-print_r($req);
-
     if($date <= date('Y-m-d'))
     {
         echo "Il y a une erreur au niveau de la date, veuillez réessayer ..";
