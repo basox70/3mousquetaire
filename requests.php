@@ -20,7 +20,15 @@ include ('ConfigDB.php');
 
         <div>
         <?php
-            echo $_GET['id'];
+            echo $_GET['id']; // Récupération de l'ID dans l'URL
+
+            $reponse = $bdd->query('SELECT * FROM Requests WHERE Id ='.$_GET['id']);
+            while ($donnees = $reponse->fetch()) {
+                echo '<div class="row">';
+                echo '<div class="col-sm-4">Titre</div>';
+                echo '<div class="col-sm-8">'.$donnees['Titre'].'</div>';
+                echo '</div>';
+            }
 
         ?>
 </div>
