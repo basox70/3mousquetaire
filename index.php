@@ -1,8 +1,7 @@
 <?php
 include ('ConfigDB.php');
+session_start();
 ?>
-
-
 <html>
     <head>
         <meta charset="utf-8"/>
@@ -15,10 +14,16 @@ include ('ConfigDB.php');
             <div class="">
                 <h1><a href="index.php" alt="Yardim" class="">Yardim</a></h1>
             </div>
-            <div>
-                Connexion
+            <div class="connect">
+            <?php
+            if(!$_SESSION)
+            { echo "<a class=\"btn btn-primary\" href='connect.php'>Connexion</a>&nbsp;&nbsp;<a class=\"btn btn-primary\" href=\"register.php\">Inscription</a>"; }
+            else
+            {
+                echo "Bienvenue ".$_SESSION['datas']['Name'];
+                echo "&nbsp;&nbsp;<a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a>";
+            } ?>
             </div>
-            <div><a href="register.php">Inscription</a></div>
         </div>
         <div>
 
