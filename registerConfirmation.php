@@ -27,10 +27,10 @@ echo $pass_hache;
 $req = $bdd->prepare('INSERT INTO User(Name, Surname, Mail, BirthDate, City, Department, Password)
                     VALUES(:name, :surname, :mail, :birthDate, :city, :department, :pass)');
 $req->execute(array(
-    'name' => $pseudo,
-    'surname' => $pass_hache,
-    'mail' => $birthDate,
-    'birthDate' => $email,
+    'name' => $prenom,
+    'surname' => $nom,
+    'mail' => $mail,
+    'birthDate' => $birthDate,
     'city' => $city,
     'department' => $department,
     'pass' => $pass_hache));
