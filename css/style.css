@@ -1,0 +1,83 @@
+html
+{
+    width: 100%;
+}
+
+@font-face
+{
+    font-family: 'bender-inline';
+    /*src: url('../fonts/Bender-Inline.otf');*/
+    /*font-family: 'Bender-InlineOnly');*/
+    src: url('../fonts/Bender-InlineOnly.otf');
+    /*font-family: 'Bender-Solid');
+    src: url('font/Bender-Solid.otf');
+    font-family: 'Bender-Thin');
+    src: url('font/Bender-Thin.otf');
+    font-family: '');
+    src: url('');*/
+}
+.page-header
+{
+    margin : -20px 0px 20px;
+    padding: 0 0 40px;
+    background-color: #dddddd;
+}
+.banner h1
+{
+    float :left;
+}
+.banner h1 a
+{
+    font-size:80px;
+    color: #431fc5;
+    font-family: 'bender-inline';
+}
+.banner h1 a:hover
+{
+    text-decoration: none;
+    color: #431fc5;
+}
+.image
+{
+    margin: 2em 0 0 34em;
+    float: left;
+}
+.banner
+{
+    height: 100px;
+}
+.description
+{
+    float: left;
+    margin:0 0 0 -24em;
+}
+
+.description h4
+{
+    text-align: center;
+    font-family: 'bender-inline';
+}
+
+.search select
+{
+    margin-right: 20px;
+    font-size:20px;
+    width: 20%;
+}
+
+.page-body
+{
+    margin: auto;
+    width: 85%;
+}
+
+.tableau
+{
+    margin: auto;
+    width: 80%;
+}
+
+table
+{
+    margin:auto;
+}

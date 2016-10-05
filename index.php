@@ -6,13 +6,18 @@ session_start();
     <head>
         <meta charset="utf-8"/>
         <title>Yardim - Accueil</title>
-        <link href="css/style.css" rel="stylesheet">
         <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     </head>
     <body>
         <div class="page-header">
-            <div class="">
-                <h1><a href="index.php" alt="Yardim" class="">Yardim</a></h1>
+            <div class="image"><img src="img/logo-simple.png"></div>
+            <div class="banner">
+                <h1><a href="index.php" class="">Yardim</a></h1>
+            </div>
+            <div class="description">
+                <h4><em>Le site d'aide a la personne pour les etudiants</em></h4>
             </div>
             <div class="connect">
             <?php
