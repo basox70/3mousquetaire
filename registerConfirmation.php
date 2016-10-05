@@ -42,6 +42,7 @@ $req = $bdd->prepare('INSERT INTO User(Name, Surname, Mail, BirthDate, City, Dep
                     VALUES(:name, :surname, :mail, :birthDate, :city, :department, :pass)');
 
     if (isset($erreur)) echo '<br />',$erreur;
+
     if($pass_hache == $pass_hache2)
     {
         echo 'Félicitations, vous êtes désormais un nouvel acteur de Yardim ! ';

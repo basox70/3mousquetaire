@@ -26,6 +26,7 @@ include "ConfigDB.php";
     <form action="addRequestConfirmation.php" method="post">
         Titre : <input type="text" name="title" value=""><br />
         Description : <input type="text" size="200" style="display: block; width: 20%;" name="description" value=""><br />
+        A effectuer pour le : <input type="date" name="date" value=""><br />
         Email : <input type="email" name="email" value=""><br />
         Numéro de téléphone : * <input type="text" size="10" name="number" value=""><br />
         Votre nom :  <input type = "text" name = "name" value = ""><br />
