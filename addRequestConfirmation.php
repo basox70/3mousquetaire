@@ -35,6 +35,7 @@ include "ConfigDB.php";
     $req = $bdd->prepare('INSERT INTO Requests(Title, Mail, PhoneNumber, Description, Date, Department, City, Nickname)
                                         VALUES(:title, :email, :number, :description, :date, :department, :city, :name)');
 
+print_r($req);
 
     if($date <= date('Y-m-d'))
     {
@@ -50,11 +51,10 @@ include "ConfigDB.php";
             'description' => $description,
             'date' => $date,
             'department' => $department,
+            'city' => $city,
             'name' => $name));
 
-        echo $req;
         echo '<br />';
-        print_r($req);
 
         echo "Votre annonce a bien été ajouté. Vous pouvez la retrouver dès maintenant sur la page d'accueil.";
         echo '<a href = "index.php"> Retour à l\'accueil </a> ';
