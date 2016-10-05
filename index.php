@@ -29,6 +29,7 @@ include ('ConfigDB.php');
             echo '<th>Description</th>';
             echo '<th>Date</th>';
             echo '<th>Departement</th>';
+            echo '<th> </th>';
             echo '</tr>';
             echo '</thead>';
 
@@ -41,6 +42,7 @@ include ('ConfigDB.php');
                 echo '<td>'.$donnees['Description'].'</td>';
                 echo '<td>'.$donnees['Date'].'</td>';
                 echo '<td>'.$donnees['Department'].'</td>';
+                echo '<td><a href = "requests.php">J\'y vais</a></td>';
                 echo '</tbody>';
                 echo '<tfoot></tfoot>';
 
