@@ -27,7 +27,7 @@
             Mail : <input type="email" name="email" value=""><br />
             Date de Naissance : <input type = "date" name = "birthDate" value = ""><br />
             Ville : <input type = "text" name = "city" value = ""><br />
-            Département : <select name="formGender">
+            Département : <select name="department">
                             <option value="">Select...</option>
                             <option value="01">Ain</option>
                             <option value="01">Aisne</option>

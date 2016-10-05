@@ -19,6 +19,14 @@ include ('ConfigDB.php');
             <div><a href="register.php">Inscription</a></div>
         </div>
         <div>
+
+            <div class = "button_add_request">
+                <button class ="btn btn-default"><a href = "addRequest.php">Ajouter une Annonce .. </a></button>
+            </div>
+
+            <div class = "button_student_offers">
+                <button class="btn btn-block">Etudiant ? Postez votre offre .. </button>
+            </div>
             <?php
 
             echo "bonjour";
