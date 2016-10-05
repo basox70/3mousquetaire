@@ -31,28 +31,33 @@ include "ConfigDB.php";
     $city = $_POST['city'];
     $department = $_POST['department'];
 
-
-    echo $titre;
-    echo $description;
-    echo $date;
-    echo $email;
-    echo $number;
-    echo $name;
-    echo $city;
-    echo $department;
-
-// Insertion
-$req = $bdd->prepare('INSERT INTO Requests(Title, Mail, PhoneNumber, Description, Date, Department, Nickname)
-                    VALUES(:titre, :email, :number, :description, :date, :department, :name)');
+    // Insertion
+    $req = $bdd->prepare('INSERT INTO Requests(Title, Mail, PhoneNumber, Description, Date, Department, Nickname)
+                        VALUES(:titre, :email, :number, :description, :date, :department, :name)');
 
 
-if (isset($erreur)) echo '<br />',$erreur;
+    if (isset($erreur)) echo '<br />',$erreur;
 
 
-if($date <= date('Y-m-d'))
-    echo "Erreur sur la date ";
-else
-    echo 'Good';
+    if($date <= date('Y-m-d'))
+    {
+        echo "Il y a une erreur au niveau de la date, veuillez réessayer ..";
+        echo '<a href = "addRequest.php">Retour au formulaire d\'ajout d\'une annonce</a>';
+    }
+    else
+    {
+        $req->execute(array(
+            'title' => $titre,
+            'email' => $email,
+            'number' => $number,
+            'description' => $description,
+            'date' => $date,
+            'department' => $department,
+            'name' => $name));
+        echo "Votre annonce a bien été ajouté. Vous pouvez la retrouver dès maintenant sur la page d'accueil.";
+        echo '<a href = "index.php"> Retour à l\'accueil </a> ';
+
+    }
 
 
 ?>
