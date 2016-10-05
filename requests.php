@@ -1,2 +1,2 @@
 <?php
-echo "bonjour";
+echo $_GET['Id'];
