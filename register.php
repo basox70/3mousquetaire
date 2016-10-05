@@ -136,10 +136,8 @@
             Confirmation du mot de passe : <input type="password" name="pass_confirm" value=""><br />
             <input type="submit" name="inscription" value="Inscription">
         </form>
-<?php
-echo $_GET['name'];
 
 
-?>
+
 </body>
 </html>

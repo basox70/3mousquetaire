@@ -23,9 +23,9 @@ include "ConfigDB.php";
 
 <div>
         Proposer une nouvelle annonce ..
-    <form action="registerConfirmation.php" method="post">
+    <form action="addRequestConfirmation.php.php" method="post">
         Titre : <input type="text" name="title" value=""><br />
-        Description : <input type="text" size="200" style="display: block" name="description" value=""><br />
+        Description : <input type="text" size="200" style="display: block; width: 20%;" name="description" value=""><br />
         Email : <input type="email" name="email" value=""><br />
         Numéro de téléphone : * <input type="text" size="10" name="number" value=""><br />
         Votre nom :  <input type = "text" name = "name" value = ""><br />
@@ -134,7 +134,7 @@ include "ConfigDB.php";
             <option value="974">La Réunion</option>
             <option value="975">Mayotte</option>
         </select> <br />
-        <input type="submit" name="addRequest" value="AddRequest">
+        <input type="submit" name="addRequest" value="Ajouter l'annonce">
     </form>
 
 
