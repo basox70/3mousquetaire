@@ -23,7 +23,7 @@ include "ConfigDB.php";
 
 <div>
         Proposer une nouvelle annonce ..
-    <form action="addRequestConfirmation.php.php" method="post">
+    <form action="addRequestConfirmation.php" method="post">
         Titre : <input type="text" name="title" value=""><br />
         Description : <input type="text" size="200" style="display: block; width: 20%;" name="description" value=""><br />
         Email : <input type="email" name="email" value=""><br />
