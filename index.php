@@ -87,25 +87,28 @@ session_start();
             echo date('Y-m-d');
 
             $reponse = $bdd->query('SELECT * FROM Requests');
+            $category = $bdd->query('SELECT * FROM Category c, Requests r WHERE c.Id = r.IdCategory');
             echo '<table class="table table-bordered" style="width: 75%">';
             echo '<thead>';
             echo '<tr>';
             echo '<th></th>';
             echo '<th>Titre</th>';
             echo '<th>Description</th>';
+            echo '<th>Categorie</th>';
             echo '<th>Date</th>';
             echo '<th>Departement</th>';
             echo '<th> </th>';
             echo '</tr>';
             echo '</thead>';
 
-            while($donnees = $reponse->fetch())
+            while($donnees = $reponse->fetch() && $cat = $category->fetch())
             {
                 echo '<tr>';
 
                 echo '<td>'.$donnees['Id'].'</td>';
                 echo '<td>'.$donnees['Title'].'</td>';
                 echo '<td>'.$donnees['Description'].'</td>';
+                echo '<td>'.$cat['Name'].'</td>';
                 echo '<td>'.$donnees['Date'].'</td>';
                 echo '<td>'.$donnees['Department'].'</td>';
                 echo '<td><a href = "requests.php?id='.$donnees['Id'].'">J\'y vais</a></td>';
