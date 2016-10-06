@@ -26,6 +26,16 @@ include "Config.php";
     <form action="addRequestConfirmation.php" method="post">
         Titre : <input type="text" name="title" value=""><br />
         Description : <input type="text" size="200" style="display: block; width: 20%;" name="description" value=""><br />
+
+        Catégorie : <select name = "categorie">
+            <?php
+            $categories = $bdd->query("SELECT * FROM Category");
+            while ($categorie = $categories->fetch()) {
+                echo "<option value=".$categorie['Name']."></option>";
+            }
+            ?>
+
+                    </select>
         A effectuer pour le : <input type="date" name="date" value=""><br />
         Email : <input type="email" name="email" value=""><br />
         Numéro de téléphone : * <input type="text" size="10" name="number" value=""><br />
