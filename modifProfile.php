@@ -67,17 +67,13 @@ echo $pass_conf;
 
 // Insertion
 //$req = $bdd->prepare('Update User SET Nickname = :pseudo, City = :city, Mail = :mail, Password = :password WHERE Id = :id');
-$req = $bdd->prepare('Update :tabl SET Nickname = "JULESMARQUIS" WHERE Id = :id');
+$req = $bdd->prepare('Update User SET Nickname = "TEST" WHERE Id = 2');
 
 print_r($req);
 
     if($pass_hache == $pass_hache2) {
 
-        $req->execute(array(
-            'tabl' => "User",
-            'id' => $_SESSION['datas']['Id'],
-            'pseudo' => $pseudo
-        ));
+        $req->execute();
         /*$req->execute(array(
             'id' => $_SESSION['datas']['Id'],
             'pseudo' => $pseudo,
