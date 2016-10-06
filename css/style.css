@@ -57,8 +57,7 @@ html
 }
 .connect
 {
-    margin: 0px 0 0px 80%;
-    position: fixed;
+    margin-top: -2em;
 }
 .search select
 {
