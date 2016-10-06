@@ -74,6 +74,7 @@ print_r($req);
             'mail' => $email,
             'password' => $pass_hache
         ));
+        print_r($req);
     }
     else
     {
