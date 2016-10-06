@@ -45,7 +45,7 @@ session_start();
 
 <table class="table table-responsive" style="width: 75%;">
     <tr>
-        <td height="26" colspan="2">Your Profile Information </td>
+        <td height="26" colspan="2">Vos informations</td>
     </tr>
     <tr>
         <td>Prénom : </td>
@@ -74,6 +74,10 @@ session_start();
     <tr>
         <td>Adresse Email : </td>
         <td><?php echo $_SESSION['datas']['Mail'] ?></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button class="btn btn-info"><a href="modifProfile.php">Modifier</a></button></td>
     </tr>
 </table>
 
