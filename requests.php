@@ -63,9 +63,10 @@ include('Config.php');
             echo '<div class="col-sm-1"></div>';
             echo '<div class="col-sm-3">Pseudo</div>';
             echo '<div class="col-sm-6">'.$donnees['Nickname'].'</div>';
-        echo '</div>';
+        echo '</div>'; ?>
 
-        echo '<button class="btn btn-success">J\'envoie</button>';
+        <button class="btn btn-success"><a href="mailto:".<?php $donnees['Mail']?> ">J\'envoie</a></button>
+    <?php
         echo '<button class="btn btn-warning"><a href="index.php">Page Précedente</a></button>';
     }
     echo '</div>';
