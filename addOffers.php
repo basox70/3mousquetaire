@@ -60,8 +60,8 @@ session_start();
                     ?>
 
                     </select><br />
-                    Disponible à partir du  : <input type="dateD" name="date" value=""><br />
-                    Jusqu'au : <input type="dateF" name="date" value=""><br />
+                    Disponible à partir du  : <input type="date" name="dateD" value=""><br />
+                    Jusqu'au : <input type="date" name="dateF" value=""><br />
                     Votre Email : <input type="email" name="email" value=""><br />
                     Votre Numéro de téléphone : * <input type="text" size="10" name="number" value=""><br />
                     Votre nom :  <input type = "text" name = "name" value = ""><br />
