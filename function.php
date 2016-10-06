@@ -41,4 +41,3 @@ function Connection($mail, $password,$bdd)
         echo "Le compte n'existe pas";
     }
 }
-?>
