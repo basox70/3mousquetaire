@@ -52,11 +52,11 @@ session_start();
     $pseudo = $_POST['pseudo'];
     $city = $_POST['city'];
     $email = $_POST['email'];
-/*    $pass= $_POST['pass'];
+    $pass= $_POST['pass'];
     $pass_conf = $_POST['pass_conf'];
 
     $pass_hache = sha1($_POST['pass']);
-    $pass_hache2 = sha1($_POST['pass_conf']);*/
+    $pass_hache2 = sha1($_POST['pass_conf']);
 
 
 echo $pseudo;
@@ -66,23 +66,39 @@ echo $pass;
 echo $pass_conf;
 
 // Insertion
-$req = $bdd->prepare('Update User SET Nickname = :pseudo, City = :city, Mail = :mail WHERE Id = :id');
+$req = $bdd->prepare('Update User SET Nickname = :pseudo, City = :city, Mail = :mail, Password = :pass WHERE Id = :id');
+$req2 = $bdd->prepare('Update User SET Nickname = :pseudo, City = :city, Mail = :mail WHERE Id = :id');
 
-    if($pass_hache == $pass_hache2) {
-        $req->execute(array(
+
+    if($pass != null && $pass_conf != null)
+    {
+        if ($pass_hache == $pass_hache2) {
+            $req->execute(array(
+                'id' => $_SESSION['datas']['Id'],
+                'pseudo' => $pseudo,
+                'city' => $city,
+                'mail' => $email,
+            ));
+
+            echo "Vos informations ont été modifié avec Succès ! ";
+            echo "<a href='function.php?deconnect=true'> Reconnectez-vous pour que vos changements prennent effets.</a>";
+        } else {
+            echo 'Les Mots de passes ne concordent pas. Veuillez Réessayer.';
+            echo '<a href = "profile.php">Retour à votre Profil </a>';
+        }
+    }
+    else
+    {
+        $req2->execute(array(
             'id' => $_SESSION['datas']['Id'],
             'pseudo' => $pseudo,
             'city' => $city,
             'mail' => $email,
+            'pass' => $pass_hache
         ));
 
         echo "Vos informations ont été modifié avec Succès ! ";
         echo "<a href='function.php?deconnect=true'> Reconnectez-vous pour que vos changements prennent effets.</a>";
-    }
-    else
-    {
-        echo 'Les Mots de passes ne concordent pas. Veuillez Réessayer.';
-        echo '<a href = "profile.php">Retour à votre Profil </a>';
     }
 
 
