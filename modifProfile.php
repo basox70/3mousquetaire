@@ -61,7 +61,7 @@ session_start();
     $pass_hache2 = sha1($_POST['pass_conf']);
 
 // Insertion
-$req = $bdd->prepare("Update User set Nickname = :pseudo, City = :city, Mail = :mail, Password = :password WHERE Id = :id");
+$req = $bdd->prepare('Update User SET Nickname = ":pseudo", City = ":city", Mail = ":mail", Password = ":password" WHERE Id = :id');
 
 print_r($req);
 
