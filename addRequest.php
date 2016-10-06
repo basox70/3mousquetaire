@@ -31,7 +31,7 @@ include "Config.php";
             <?php
             $categories = $bdd->query("SELECT * FROM Category");
             while ($categorie = $categories->fetch()) {
-                echo "<option value=".$categorie['Name']."></option>";
+                echo "<option value=".$categorie['Name'].">".$categorie['Name']."</option>";
             }
             ?>
 
