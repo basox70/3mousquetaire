@@ -31,12 +31,12 @@ session_start();
                 { echo " <span class=\"pull-right\"><a class=\"btn btn-primary\" href='connect.php'>Se connecter</a>&nbsp;<a class=\"btn btn-primary\" href=\"register.php\">S'inscrire</a></span>"; }
                 else
                 {
-                    echo "Bienvenue ".$_SESSION['datas']['Name'];
+                    echo "<span class=\"pull-right\" >Bienvenue ".$_SESSION['datas']['Name']."&nbsp;";
                     if(!$_SESSION['datas']['Admin']=='1')
                     {
-                        echo " <a class=\"btn btn-primary pull-right\" href=\"profile.php\" >Profil</a>";
+                        echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
                     }
-                    echo " <a class=\"btn btn-warning pull-right\" href='function.php?deconnect=true' >Deconnexion</a>";
+                    echo " <a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a></span>";
                 } ?>
             </div>
         </div>
