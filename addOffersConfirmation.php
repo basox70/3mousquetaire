@@ -59,7 +59,7 @@ $req = $bdd->prepare('INSERT INTO Offers(Title, Description, BeginningDate, Endi
 if($dateD <= date('Y-m-d'))
 {
     echo "Il y a une erreur au niveau de la date, veuillez réessayer ..";
-    echo '<a href = "addOffers.php.php">Retour au formulaire d\'ajout d\'une annonce</a>';
+    echo '<a href = "addOffers.php">Retour au formulaire d\'ajout d\'une annonce</a>';
 }
 else
 {
