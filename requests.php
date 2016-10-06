@@ -22,10 +22,12 @@ include('Config.php');
     <?php
     echo $_GET['id']; // Récupération de l'ID dans l'URL
     $reponse = $bdd->query('SELECT * FROM Requests WHERE Id ='.$_GET['id']);
+    $category = $bdd->query('SELECT * FROM Category c, Requests r WHERE c.Id = r.IdCategory');
 
     echo '<div class = "container" style="border: 1px solid;">';
 
-    while ($donnees = $reponse->fetch()) {
+    while(($donnees = $reponse->fetch()) && ($cat = $category->fetch()))
+    {
         echo '<div class="row">';
             echo '<div class="col-sm-1"></div>';
             echo '<div class="col-sm-3">Titre</div>';
@@ -38,6 +40,12 @@ include('Config.php');
             echo '<div class="col-sm-6">'.$donnees['Description'].'</div>';
         echo '</div>';
 
+        echo '<div class="row">';
+            echo '<div class="col-sm-1"></div>';
+            echo '<div class="col-sm-3">Catégorie</div>';
+            echo '<td>'.$cat['Name'].'</td>';
+        echo '</div>';
+        
         echo '<div class="row">';
             echo '<div class="col-sm-1"></div>';
             echo '<div class="col-sm-3">Adresse Email de Contact</div>';
