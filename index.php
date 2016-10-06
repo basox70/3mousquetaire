@@ -36,7 +36,7 @@ session_start();
             } ?>
             </div>
         </div>
-        <div class="col-xs-6">
+        <div>
 
             <div class = "button_add_request">
                 <button class ="btn btn-default"><a href = "addRequest.php">Ajouter une annonce .. </a></button>
