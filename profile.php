@@ -43,36 +43,36 @@ session_start();
     </div>
 </div>
 
-<table class="table table-responsive" width="75%" border="0" align="center" cellpadding="0">
+<table class="table table-responsive" width="75%" align="center">
     <tr>
         <td height="26" colspan="2">Your Profile Information </td>
     </tr>
     <tr>
-        <td valign="top"><div align="left">Prénom : </div></td>
+        <td valign="top">>Prénom : </td>
         <td valign="top"><?php echo $_SESSION['datas']['Name'] ?></td>
     </tr>
     <tr>
-        <td valign="top"><div align="left">Nom : </div></td>
+        <td valign="top">Nom : </td>
         <td valign="top"><?php echo $_SESSION['datas']['Surname'] ?></td>
     </tr>
     <tr>
-        <td valign="top"><div align="left">Pseudo : </div></td>
+        <td valign="top">Pseudo : </td>
         <td valign="top"><?php echo $_SESSION['datas']['Nickname'] ?></td>
     </tr>
     <tr>
-        <td valign="top"><div align="left">Date de Naissance : </div></td>
+        <td valign="top">Date de Naissance : </td>
         <td valign="top"><?php echo $_SESSION['datas']['BirthDate'] ?></td>
     </tr>
     <tr>
-        <td valign="top"><div align="left">Ville : </div></td>
+        <td valign="top">Ville : </td>
         <td valign="top"><?php echo $_SESSION['datas']['City'] ?></td>
     </tr>
     <tr>
-        <td valign="top"><div align="left">Département : </div></td>
+        <td valign="top">Département : </td>
         <td valign="top"><?php echo $_SESSION['datas']['Department'] ?></td>
     </tr>
     <tr>
-        <td valign="top"><div align="left">Adresse Email : </div></td>
+        <td valign="top">Adresse Email : </td>
         <td valign="top"><?php echo $_SESSION['datas']['Mail'] ?></td>
     </tr>
 </table>
