@@ -24,11 +24,7 @@ session_start();
 
 <?php
 
-echo $_SESSION['datas']['Id'];
-echo $_SESSION['datas']['Name'];
-
-
-
+echo
 $titre = $_POST['title'];
 $description = $_POST['description'];
 $categorie = $_POST['categorie'];
@@ -55,7 +51,7 @@ echo $city;
 echo '<br />';
 echo $department;
 echo '<br />';
-/*
+
 // Insertion
 $req = $bdd->prepare('INSERT INTO Offers(Title, Description, BeginningDate, EndingDate, IdCategory, IdUser, City, Department)
                                         VALUES(:title, :description, :dateD, :dateF, :categorie, :user, :city, :department)');
@@ -69,22 +65,21 @@ else
 {
     $req->execute(array(
         'title' => $titre,
-        'email' => $email,
-        'number' => $number,
         'description' => $description,
-        'date' => $date,
-        'department' => $department,
+        'dateD' => $dateD,
+        'dateF' => $dateF,
+        'categorie' => $categorie,
+        'user' => $_SESSION['datas']['Id'],
         'city' => $city,
-        'name' => $name,
-        'categorie' => $categorie
+        'department' => $department
     ));
 
     echo '<br />';
 
-    echo "Votre annonce a bien été ajouté. Vous pouvez la retrouver dès maintenant sur la page d'accueil.";
+    echo "Votre Offre a bien été ajouté. Vous pouvez la retrouver dès maintenant sur la page d'accueil.";
     echo '<a href = "index.php"> Retour à l\'accueil </a> ';
 
-}*/
+}
 
 
 ?>
