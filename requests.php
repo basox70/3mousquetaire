@@ -45,7 +45,7 @@ include('Config.php');
             echo '<div class="col-sm-3">Catégorie</div>';
             echo '<td>'.$cat['Name'].'</td>';
         echo '</div>';
-        
+
         echo '<div class="row">';
             echo '<div class="col-sm-1"></div>';
             echo '<div class="col-sm-3">Adresse Email de Contact</div>';
