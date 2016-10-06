@@ -91,8 +91,7 @@ session_start();
             <?php
 
             $reponse = $bdd->query('SELECT * FROM Requests');
-            echo '<div style="width:100%;overflow:auto;">';
-            echo '<table class="table table-bordered" style="width: 75%">';
+            echo '<table class="table table-bordered" style="width: 75%; overflow:scroll;">';
             echo '<thead>';
             echo '<tr>';
             echo '<th></th>';
@@ -116,18 +115,7 @@ session_start();
                 echo '</tr>';
             }
             echo '</table>';
-            echo '<div style="width:100%;height:200px;overflow-Y:auto;">';
-            echo '<table border="1" style="width:100%;overflow:hidden">'; ?>
-            <script type=\'text/javascript\'>
-            var largcol = new Array()
-            for (i=1;i<5;i++){
-            largcol[i]=parseInt(document.getElementById(\'col\'+i).offsetWidth)-3 + "px";
-            }
-            for (i=0;i<55;i++){
-            document.write("\<tr\>\<td style=\'width:"+largcol[1]+"\'\>dsfqsdfsdd dsqf qsdf sdqf sqdf qsdf sdf &nbsp;\<\/td\>\<td style=\'width:"+largcol[2]+"\'\>two\<\/td\>\<td style=\'width:"+largcol[3]+"\'\>three\<\/td\>\<td style=\'width:"+largcol[4]+"\'\>four\<\/td\>\<\/tr\>")
-            }
-            </script>
-            </table>
+            ?>
         </div>
     </body>
 </html>
