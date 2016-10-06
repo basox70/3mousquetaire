@@ -24,6 +24,7 @@ include "Config.php";
 
     $titre = $_POST['title'];
     $description = $_POST['description'];
+    $categorie = $_POST['categorie'];
     $date = $_POST['date'];
     $email = $_POST['email'];
     $number = $_POST['number'];
@@ -32,8 +33,8 @@ include "Config.php";
     $department = $_POST['department'];
 
     // Insertion
-    $req = $bdd->prepare('INSERT INTO Requests(Title, Mail, PhoneNumber, Description, Date, Department, City, Nickname)
-                                        VALUES(:title, :email, :number, :description, :date, :department, :city, :name)');
+    $req = $bdd->prepare('INSERT INTO Requests(Title, Mail, PhoneNumber, Description, Date, Department, City, Nickname, IdCategory)
+                                        VALUES(:title, :email, :number, :description, :date, :department, :city, :name, :categorie)');
 
     if($date <= date('Y-m-d'))
     {
@@ -50,7 +51,9 @@ include "Config.php";
             'date' => $date,
             'department' => $department,
             'city' => $city,
-            'name' => $name));
+            'name' => $name,
+            'categorie' => $categorie
+            ));
 
         echo '<br />';
 
