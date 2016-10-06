@@ -23,6 +23,10 @@ include "Config.php";
 
 <?php
 
+$id = $_SESSION['id'];
+echo $id;
+
+
 $titre = $_POST['title'];
 $description = $_POST['description'];
 $categorie = $_POST['categorie'];
@@ -49,13 +53,10 @@ echo $city;
 echo '<br />';
 echo $department;
 echo '<br />';
-
-
-
 /*
 // Insertion
-$req = $bdd->prepare('INSERT INTO Offers(Title, Mail, PhoneNumber, Description, Date, Department, City, Nickname, IdCategory)
-                                        VALUES(:title, :email, :number, :description, :date, :department, :city, :name, :categorie)');
+$req = $bdd->prepare('INSERT INTO Offers(Title, Description, BeginningDate, EndingDate, IdCategory, IdUser, City, Department)
+                                        VALUES(:title, :description, :dateD, :dateF, :categorie, :user, :city, :department)');
 
 if($dateD <= date('Y-m-d'))
 {
