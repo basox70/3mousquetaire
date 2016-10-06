@@ -6,14 +6,15 @@ session_start();
     <head>
         <meta charset="utf-8"/>
         <title>Yardim - Accueil</title>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/normalize.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     </head>
     <body>
         <div class="page-header">
             <?php
-            if(session_id() && $_SESSION['datas']['Admin']=='1')
+            if($_SESSION && $_SESSION['datas']['Admin']=='1')
             {
                 echo "<a class=\"admin\" href\"admin.php\">Administration</a>";
             }
@@ -28,10 +29,14 @@ session_start();
             <div class="connect">
             <?php
             if(!$_SESSION)
-            { echo "<a class=\"btn btn-primary\" href='connect.php'>Connexion</a> <a class=\"btn btn-primary\" href=\"register.php\">Inscription</a>"; }
+            { echo "<a class=\"btn btn-primary\" href='connect.php'>Se connecter</a> <a class=\"btn btn-primary\" href=\"register.php\">S'inscrire</a>"; }
             else
             {
                 echo "Bienvenue ".$_SESSION['datas']['Name'];
+                if(!$_SESSION['datas']['Admin']=='1')
+                {
+                    echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
+                }
                 echo " <a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a>";
             } ?>
             </div>
@@ -39,11 +44,11 @@ session_start();
         <div>
 
             <div class = "button_add_request">
-                <button class ="btn btn-default"><a href = "addRequest.php">Ajouter une annonce .. </a></button>
+                <a class="btn btn-default" href="addRequest.php">Ajouter une annonce .. </a>
             </div>
 
             <div class = "button_student_offers">
-                <button class="btn btn-default"><a href = "addOffers.php">Etudiant ? Postez votre offre .. </a></button>
+                <a class="btn btn-default" href="#">Etudiant ? Postez votre offre .. </a>
             </div>
 
             <div class="search">
@@ -71,7 +76,7 @@ session_start();
                         <select class="form-control">
                             <option value="Ville">Toutes Villes</option>
                             <?php
-                            $cities = $bdd->query("SELECT DISTINCT(City) FROM Requests UNION SELECT DISTINCT(City) FROM User UNION SELECT DISTINCT(City) FROM Offers");
+                            $cities = $bdd->query("SELECT DISTINCT(City) FROM Requests UNION SELECT DISTINCT(City) FROM User");
                             while ($city = $cities->fetch()) {
                                 echo "<option value=".$city['City'].">".$city['City']."</option>";
                             }
@@ -84,41 +89,33 @@ session_start();
             </div>
 
             <?php
-            echo date('Y-m-d');
 
             $reponse = $bdd->query('SELECT * FROM Requests');
-            $category = $bdd->query('SELECT * FROM Category c, Requests r WHERE c.Id = r.IdCategory');
             echo '<table class="table table-bordered" style="width: 75%">';
             echo '<thead>';
             echo '<tr>';
             echo '<th></th>';
             echo '<th>Titre</th>';
             echo '<th>Description</th>';
-            echo '<th>Categorie</th>';
             echo '<th>Date</th>';
             echo '<th>Departement</th>';
             echo '<th> </th>';
             echo '</tr>';
             echo '</thead>';
 
-            while(($donnees = $reponse->fetch()) && ($cat = $category->fetch()))
+            while($donnees = $reponse->fetch())
             {
                 echo '<tr>';
-
                 echo '<td>'.$donnees['Id'].'</td>';
                 echo '<td>'.$donnees['Title'].'</td>';
                 echo '<td>'.$donnees['Description'].'</td>';
-                echo '<td>'.$cat['Name'].'</td>';
                 echo '<td>'.$donnees['Date'].'</td>';
                 echo '<td>'.$donnees['Department'].'</td>';
                 echo '<td><a href = "requests.php?id='.$donnees['Id'].'">J\'y vais</a></td>';
                 echo '</tr>';
-
             }
             echo '</table>';
-
             ?>
-
         </div>
     </body>
 </html>
