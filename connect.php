@@ -7,7 +7,7 @@ session_start();
         <title>Yardim - Connexion</title>
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     </head>
     <body>
         <div class="page-header">
@@ -20,21 +20,24 @@ session_start();
             </div>
         </div>
         <div class="">
-            <p>Se connecter</p>
+            <div class="col-xs-3">&nbsp;</div>
             <div class="col-lg-5">
+                <p class="form-group">Se connecter</p>
                 <form action="function.php" method="post">
                     <div class="form-group row">
-                        <label for='Mail'>Mail :</label>
-                        <input class="form-control" type="email" id="Mail" name="mail" placeholder="mail@example.com"/>
+                        <label class="col-xs-3 col-form-label" for='Mail'>Mail :</label>
+                        <div class="col-xs-9">
+                            <input class="form-control" type="email" id="Mail" name="mail" placeholder="mail@example.com"/>
+                        </div>
                     </div>
                     <div class="form-group row">
-                        <label for="Password">Mot de passe :</label>
-                        <input class="form-control" type="password" name="password" id="Password" placeholder="Password"/>
+                        <label class="col-xs-3 col-form-label" for="Password">Mot de passe :</label>
+                        <div class="col-xs-9">
+                            <input class="form-control" type="password" name="password" id="Password" placeholder="Password"/>
+                        </div>
                     </div>
-                    <input class="btn btn-primary" type="submit" value="Connexion"/>
+                    <input class="btn btn-primary" type="submit" value="Connexion"/><span class="pull-right">Pas encore de compte : <a class="btn btn-primary" href="register.php">Inscrivez-vous!</a></span>
                 </form>
-                <p>Pas encore de compte</p>
-                <button class="btn btn-primary" href="#">Inscrivez-vous!</button>
             </div>
         </div>
     </body>
