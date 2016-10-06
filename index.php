@@ -91,7 +91,7 @@ session_start();
             <?php
 
             $reponse = $bdd->query('SELECT * FROM Requests');
-            echo '<div style="width: 75*; height:400px; overflow:scroll;">';
+            echo '<div style="width: 75*; height:400px; overflow:auto;">';
             echo '<table class="table table-bordered" style="width: 75%;">';
             echo '<thead>';
             echo '<tr>';
