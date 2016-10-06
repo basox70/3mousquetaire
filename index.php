@@ -105,7 +105,7 @@ session_start();
 
             while($donnees = $reponse->fetch())
             {
-                echo '<tr style="display: block; overflow:auto;">';
+                echo '<tr style="overflow:auto;">';
                 echo '<td>'.$donnees['Id'].'</td>';
                 echo '<td>'.$donnees['Title'].'</td>';
                 echo '<td>'.$donnees['Description'].'</td>';
