@@ -1,6 +1,7 @@
 <?php
 
 include "Config.php";
+session_start();
 ?>
 
 <html>
@@ -24,6 +25,7 @@ include "Config.php";
 <?php
 
 echo $_SESSION['datas']['Id'];
+echo $_SESSION['datas']['Name'];
 
 
 
