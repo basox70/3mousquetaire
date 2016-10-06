@@ -34,24 +34,6 @@ $email = $_POST['email'];
 $city = $_POST['city'];
 $department = $_POST['department'];
 
-
-echo $titre;
-echo '<br />';
-echo $description;
-echo '<br />';
-echo $categorie;
-echo '<br />';
-echo $dateD;
-echo '<br />';
-echo $dateF;
-echo '<br />';
-echo $email;
-echo '<br />';
-echo $city;
-echo '<br />';
-echo $department;
-echo '<br />';
-
 // Insertion
 $req = $bdd->prepare('INSERT INTO Offers(Title, Description, BeginningDate, EndingDate, IdCategory, IdUser, City, Department)
                                         VALUES(:title, :description, :dateD, :dateF, :categorie, :user, :city, :department)');
