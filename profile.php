@@ -80,13 +80,13 @@ session_start();
         <td>Adresse Email : </td>
         <td><input type="email" name="email" value="<?php echo $_SESSION['datas']['Mail'] ?>"></td>
     </tr>
-    <tr>
+    <!--<tr>
         <td>Votre nouveau Mot de Passe : </td>
         <td><input type="password" name="pass" value=""></td>
     </tr>    <tr>
         <td>Votre Confirmation de Mot de Passe : </td>
         <td><input type="password" name="pass_conf" value=""></td>
-    </tr>
+    </tr>-->
 </table>
 
     <input type="submit" name="modifProf" value="Modifier votre Profil">

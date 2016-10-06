@@ -78,8 +78,7 @@ $req = $bdd->prepare('Update User SET Nickname = :pseudo, City = :city, Mail = :
         ));
 
         echo "Vos informations ont été modifié avec Succès ! ";
-
-        print_r($req);
+        echo "<a href='function.php?deconnect=true'> Reconnectez-vous pour que vos changements prennent effets.</a>";
     }
     else
     {
