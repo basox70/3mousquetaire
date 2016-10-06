@@ -27,19 +27,19 @@ session_start();
             <div class="description pull-left col-xs-7 hidden-xs">
                 <h4><em>Le site d'aide a la personne pour les etudiants</em></h4>
             </div>
-            <div class="connect">
-            <?php
-            if(!$_SESSION)
-            { echo "<a class=\"btn btn-primary\" href='connect.php'>Se connecter</a> <a class=\"btn btn-primary\" href=\"register.php\">S'inscrire</a>"; }
-            else
-            {
-                echo "Bienvenue ".$_SESSION['datas']['Name'];
-                if(!$_SESSION['datas']['Admin']=='1')
+            <div class="connect pull-right col-xs-4">
+                <?php
+                if(!$_SESSION)
+                { echo " <span class=\"pull-right\"><a class=\"btn btn-primary\" href='connect.php'>Se connecter</a>&nbsp;<a class=\"btn btn-primary\" href=\"register.php\">S'inscrire</a></span>"; }
+                else
                 {
-                    echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
-                }
-                echo " <a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a>";
-            } ?>
+                    echo "Bienvenue ".$_SESSION['datas']['Name'];
+                    if(!$_SESSION['datas']['Admin']=='1')
+                    {
+                        echo " <a class=\"btn btn-primary pull-right\" href=\"profile.php\" >Profil</a>";
+                    }
+                    echo " <a class=\"btn btn-warning pull-right\" href='function.php?deconnect=true' >Deconnexion</a>";
+                } ?>
             </div>
         </div>
         <div>
