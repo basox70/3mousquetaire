@@ -61,7 +61,7 @@ session_start();
     </tr>
     <tr>
         <td>Date de Naissance : </td>
-        <td><?php echo $_SESSION['datas']['BirthDate'] ?></td>
+        <td><?php echo $_SESSION['datas']['Birthdate'] ?></td>
     </tr>
     <tr>
         <td>Ville : </td>
