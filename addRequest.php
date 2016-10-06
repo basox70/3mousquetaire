@@ -25,7 +25,7 @@ include "Config.php";
         Proposer une nouvelle annonce ..
     <form action="addRequestConfirmation.php" method="post">
         Titre : <input type="text" name="title" value=""><br />
-        Description : <input type="text" size="200" style="display: block; width: 20%;" name="description" value=""><br />
+        Description : <textarea type="text" size="200" style="display: block; width: 20%;" name="description" value=""><br />
 
         Catégorie : <select name = "categorie">
             <?php
