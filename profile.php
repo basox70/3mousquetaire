@@ -48,8 +48,8 @@ session_start();
         <td height="26" colspan="2">Your Profile Information </td>
     </tr>
     <tr>
-        <td width="82" valign="top"><div align="left">Prénom : </div></td>
-        <td width="165" valign="top"><?php echo $_SESSION['datas']['Name'] ?></td>
+        <td valign="top"><div align="left">Prénom : </div></td>
+        <td valign="top"><?php echo $_SESSION['datas']['Name'] ?></td>
     </tr>
     <tr>
         <td valign="top"><div align="left">Nom : </div></td>
