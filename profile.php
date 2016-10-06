@@ -49,7 +49,7 @@ session_start();
     </tr>
     <tr>
         <td>Prénom : </td>
-        <td><?php echo $_SESSION['datas']['Name'] ?></td>
+        <td><input type="text" value="<?php echo $_SESSION['datas']['Name']?>"></td>
     </tr>
     <tr>
         <td>Nom : </td>
@@ -76,8 +76,7 @@ session_start();
         <td><?php echo $_SESSION['datas']['Mail'] ?></td>
     </tr>
     <tr>
-        <td></td>
-        <td><button class="btn btn-info"><a href="modifProfile.php">Modifier</a></button></td>
+        <td><button class="btn btn-info"><a href="modifProfile.php">Modifier vos informations</a></button></td>
     </tr>
 </table>
 
