@@ -67,7 +67,7 @@ echo $pass_conf;
 
 // Insertion
 //$req = $bdd->prepare('Update User SET Nickname = :pseudo, City = :city, Mail = :mail, Password = :password WHERE Id = :id');
-$req = $bdd->prepare('Update User SET Nickname = :pseudo WHERE Id = :id');
+$req = $bdd->prepare('Update User SET Nickname = "JULESMARQUIS" WHERE Id = :id');
 
 print_r($req);
 
