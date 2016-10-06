@@ -14,12 +14,6 @@ session_start();
 <body>
 <div class="page-header">
     <div class="pull-left hidden-xs col-xs-4">&nbsp;</div>
-    <?php
-    if($_SESSION && $_SESSION['datas']['Admin']=='1')
-    {
-        echo "<a class=\"admin\" href\"admin.php\">Administration</a>";
-    }
-    ?>
     <div class="pull-left hidden-xs image"><img src="img/logo-simple.png"></div>
     <div class="banner">
         <h1><a href="index.php" class="">Yardim</a></h1>
@@ -43,6 +37,10 @@ session_start();
             if(!$_SESSION['datas']['Admin']=='1')
             {
                 echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
+            }
+            if($_SESSION['datas']['Admin']=='1')
+            {
+                echo "<a class=\"btn btn-danger\" href=\"admin.php\">Administration</a>";
             }
             echo " <a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a></span>";
         } ?>
