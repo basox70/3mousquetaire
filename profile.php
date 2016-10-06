@@ -43,13 +43,14 @@ session_start();
     </div>
 </div>
 
+<form action="modifProfile.php" method="post">
 <table class="table table-responsive" style="width: 75%;">
     <tr>
-        <td height="26" colspan="2">Your Profile Information </td>
+        <td height="26" colspan="2">Vos informations</td>
     </tr>
     <tr>
         <td>Prénom : </td>
-        <td><?php echo $_SESSION['datas']['Name'] ?></td>
+        <td><?php echo $_SESSION['datas']['Name']?></td>
     </tr>
     <tr>
         <td>Nom : </td>
@@ -57,15 +58,15 @@ session_start();
     </tr>
     <tr>
         <td>Pseudo : </td>
-        <td><?php echo $_SESSION['datas']['Nickname'] ?></td>
+        <td><input type="text" name="pseudo" value="<?php echo $_SESSION['datas']['Nickname'] ?>"></td>
     </tr>
     <tr>
         <td>Date de Naissance : </td>
-        <td><?php echo $_SESSION['datas']['BirthDate'] ?></td>
+        <td><?php echo $_SESSION['datas']['Birthdate'] ?></td>
     </tr>
     <tr>
         <td>Ville : </td>
-        <td><?php echo $_SESSION['datas']['City'] ?></td>
+        <td><input type="text" name ="city" value="<?php echo $_SESSION['datas']['City'] ?>"></td>
     </tr>
     <tr>
         <td>Département : </td>
@@ -73,9 +74,19 @@ session_start();
     </tr>
     <tr>
         <td>Adresse Email : </td>
-        <td><?php echo $_SESSION['datas']['Mail'] ?></td>
+        <td><input type="email" city="email" value="<?php echo $_SESSION['datas']['Mail'] ?>"></td>
+    </tr>
+    <tr>
+        <td>Votre nouveau Mot de Passe : </td>
+        <td><input type="password" name="pass" value=""></td>
+    </tr>    <tr>
+        <td>Votre Confirmation de Mot de Passe : </td>
+        <td><input type="password" name="pass_conf" value=""></td>
     </tr>
 </table>
+
+    <input type="submit" name="modifProf" value="Modifier votre Profil">
+</form>
 
 </body>
 </html>
