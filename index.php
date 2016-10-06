@@ -53,7 +53,7 @@ session_start();
                 </div>
                 <div class="col-lg-3">
                     <a class="btn btn-default btn-block" href="addOffers.php">Etudiant? Postez votre offre</a>
-                </div><br/>
+                </div>
             </div>
 
             <?php
@@ -62,6 +62,7 @@ session_start();
             echo '<div class="col-xs-3 hidden-xs hidden-sm">&nbsp;</div>';
             echo '<div class="col-lg-7 col-xs-7" style="height:350px; overflow:auto;">';
             echo '<table class="table table-bordered" >';
+            echo '<caption>Demandes</caption>';
             echo '<thead>';
             echo '<th>Titre</th>';
             echo '<th>Description</th>';
@@ -88,7 +89,8 @@ session_start();
             $reponse = $bdd->query('SELECT * FROM Offers');
             echo '<div class="col-xs-3 hidden-xs hidden-sm">&nbsp;</div>';
             echo '<div class="col-lg-7 col-xs-7" style="height:350px; overflow:auto;">';
-            echo '<table class="table table-bordered" style="width: 75%;">';
+            echo '<table class="table table-bordered">';
+            echo '<caption>Offres</caption>';
             echo '<thead>';
             echo '<th>Titre</th>';
             echo '<th>Date de début</th>';

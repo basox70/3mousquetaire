@@ -72,8 +72,15 @@ html
     margin: auto;
     width: 80%;
 }
+caption {
+    color: #080808;
+    font-weight: bold;
+    text-align: center ;
+    background-color: #e5e5e5;
+}
 
-/*table
+table
 {
-    margin:auto;
-}*/
+    border-color:#e5e5e5 ;
+    margin-top: .25em;
+}
