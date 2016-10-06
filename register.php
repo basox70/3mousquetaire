@@ -32,7 +32,13 @@ session_start();
                 { echo " <span class=\"pull-right\"><a class=\"btn btn-primary\" href='connect.php'>Se connecter</a>&nbsp;<a class=\"btn btn-primary\" href=\"register.php\">S'inscrire</a></span>"; }
                 else
                 {
-                    echo "<span class=\"pull-right\" >Bienvenue ".$_SESSION['datas']['Name']."&nbsp;";
+                    if($_SESSION['datas']['Nickname']== null)
+                    {
+                        echo "<span class=\"pull-right\" >Bienvenue " . $_SESSION['datas']['Name'] . "&nbsp;";
+                    }else
+                    {
+                        echo "<span class=\"pull-right\" >Bienvenue " . $_SESSION['datas']['Nickname'] . "&nbsp;";
+                    }
                     if(!$_SESSION['datas']['Admin']=='1')
                     {
                         echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
@@ -56,6 +62,12 @@ session_start();
                         <label class="col-xs-3 col-form-label" for='Nom'>Nom : </label>
                         <div class="col-xs-9">
                             <input class="form-control" type="text" name="surname" value="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-xs-3 col-form-label" for='Nickname'>Pseudo : </label>
+                        <div class="col-xs-9">
+                            <input class="form-control" type="text" name="Nickname" value="">
                         </div>
                     </div>
                     <div class="form-group row">

@@ -1,5 +1,6 @@
 <?php
 include "Config.php";
+session_start();
 ?>
 
 <html>
@@ -32,7 +33,13 @@ include "Config.php";
                 { echo " <span class=\"pull-right\"><a class=\"btn btn-primary\" href='connect.php'>Se connecter</a>&nbsp;<a class=\"btn btn-primary\" href=\"register.php\">S'inscrire</a></span>"; }
                 else
                 {
-                    echo "<span class=\"pull-right\" >Bienvenue ".$_SESSION['datas']['Name']."&nbsp;";
+                    if($_SESSION['datas']['Nickname']== null)
+                    {
+                        echo "<span class=\"pull-right\" >Bienvenue " . $_SESSION['datas']['Name'] . "&nbsp;";
+                    }else
+                    {
+                        echo "<span class=\"pull-right\" >Bienvenue " . $_SESSION['datas']['Nickname'] . "&nbsp;";
+                    }
                     if(!$_SESSION['datas']['Admin']=='1')
                     {
                         echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
@@ -47,6 +54,7 @@ include "Config.php";
 
             $prenom = $_POST['name'];
             $nom = $_POST['surname'];
+            $nickname = $_POST['Nickname'];
             $mail = $_POST['email'];
             $birthDate = $_POST['birthDate'];
             $city = $_POST['city'];
@@ -59,8 +67,8 @@ include "Config.php";
             $pass_hache2 = sha1($_POST['pass_confirm']);
 
             // Insertion
-            $req = $bdd->prepare('INSERT INTO User(Name, Surname, Mail, BirthDate, City, Department, Password)
-                                VALUES(:name, :surname, :mail, :birthDate, :city, :department, :pass)');
+            $req = $bdd->prepare('INSERT INTO User(Name, Surname, Mail, BirthDate, City, Department, Password, Nickname)
+                                VALUES(:name, :surname, :mail, :birthDate, :city, :department, :pass, :nickname)');
 
             if (isset($erreur)) echo '<br />',$erreur;
 
@@ -75,7 +83,8 @@ include "Config.php";
                     'birthDate' => $birthDate,
                     'city' => $city,
                     'department' => $department,
-                    'pass' => $pass_hache));
+                    'pass' => $pass_hache,
+                    'nickname' => $nickname));
             }
             else
             {
