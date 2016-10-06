@@ -19,7 +19,7 @@ session_start();
                 <h1><a href="index.php" class="">Yardim</a></h1>
             </div>
             <div class="description pull-left col-xs-7 hidden-xs">
-                <h4><em>Le site d'aide a la personne pour les etudiants</em></h4>
+                <h4><em>Le site d'aide a la personne par des etudiants benevoles</em></h4>
             </div>
             <div class="connect pull-right col-xs-4">
                 <?php
@@ -47,77 +47,64 @@ session_start();
             </div>
         </div>
         <div>
-
-            <div class = "button_add_request">
-                <a class="btn btn-default" href="addRequest.php">Ajouter une annonce .. </a>
-            </div>
-
-            <div class = "button_student_offers">
-                <a class="btn btn-default" href="addOffers.php">Etudiant ? Postez votre offre .. </a>
-            </div>
-
-            <div class="search">
-                <form class="form-inline" method="post" action="#">
-                    <p>
-                        <label for="type">Je recherche</label><br />
-                        <select class="form-control" name="type" id="type">
-                            <option value="both">Les offres et les demandes</option>
-                            <option value="requests">les demandes</option>
-                            <option value="offers">les offres</option>
-                        </select>
-                        <select class="form-control" name="categorie" id="categorie">
-                            <option value="all">Toutes catégories</option>
-                            <?php
-                                $categories = $bdd->query('SELECT * FROM Category');
-                                while ($category = $categories->fetch()) {
-                                    echo "<option value=".$category['Name'].">".$category['Name']."</option>";
-                                }
-                            ?>
-                        </select>
-                        <select class="form-control" name="location" id="locations">
-                            <option value="Departement">Tous départements</option>
-                            <?php echo $departments; ?>
-                        </select>
-                        <select class="form-control">
-                            <option value="Ville">Toutes Villes</option>
-                            <?php
-                            $cities = $bdd->query("SELECT DISTINCT(City) FROM Requests UNION SELECT DISTINCT(City) FROM User");
-                            while ($city = $cities->fetch()) {
-                                echo "<option value=".$city['City'].">".$city['City']."</option>";
-                            }
-                            ?>
-                        </select>
-                        <button class="btn btn-primary">RECHERCHER</button>
-                        </select>
-                    </p>
-                </form>
+            <div class="col-xs-11">
+                <div class="col-lg-3">
+                    <a class="btn btn-default btn-block" href="addRequest.php">Ajouter une annonce</a>
+                </div>
+                <div class="col-lg-3">
+                    <a class="btn btn-default btn-block" href="addOffers.php">Etudiant? Postez votre offre</a>
+                </div><br/>
             </div>
 
             <?php
-
+            //demandes
             $reponse = $bdd->query('SELECT * FROM Requests');
-            echo '<div style="width: 75*; height:400px; overflow:auto;">';
-            echo '<table class="table table-bordered" style="width: 75%;">';
+            echo '<div class="col-xs-3 hidden-xs hidden-sm">&nbsp;</div>';
+            echo '<div class="col-lg-7 col-xs-7" style="height:350px; overflow:auto;">';
+            echo '<table class="table table-bordered" >';
             echo '<thead>';
-            echo '<tr>';
-            echo '<th></th>';
             echo '<th>Titre</th>';
             echo '<th>Description</th>';
             echo '<th>Date</th>';
             echo '<th>Departement</th>';
             echo '<th> </th>';
-            echo '</tr>';
             echo '</thead>';
 
             while($donnees = $reponse->fetch())
             {
                 echo '<tr>';
-                echo '<td>'.$donnees['Id'].'</td>';
                 echo '<td>'.$donnees['Title'].'</td>';
                 echo '<td>'.$donnees['Description'].'</td>';
                 echo '<td>'.$donnees['Date'].'</td>';
                 echo '<td>'.$donnees['Department'].'</td>';
-                echo '<td><a href = "requests.php?id='.$donnees['Id'].'">J\'y vais</a></td>';
+                echo '<td><a href = "requests.php?type=request&id='.$donnees['Id'].'">J\'y vais</a></td>';
+                echo '</tr>';
+            }
+            echo '</table>';
+            echo'</div>';
+
+
+            //Offres
+            $reponse = $bdd->query('SELECT * FROM Offers');
+            echo '<div class="col-xs-3 hidden-xs hidden-sm">&nbsp;</div>';
+            echo '<div class="col-lg-7 col-xs-7" style="height:350px; overflow:auto;">';
+            echo '<table class="table table-bordered" style="width: 75%;">';
+            echo '<thead>';
+            echo '<th>Titre</th>';
+            echo '<th>Date de début</th>';
+            echo '<th>Date de fin</th>';
+            echo '<th>Departement</th>';
+            echo '<th> </th>';
+            echo '</thead>';
+
+            while($donnees = $reponse->fetch())
+            {
+                echo '<tr>';
+                echo '<td>'.$donnees['Title'].'</td>';
+                echo '<td>'.$donnees['BeginningDate'].'</td>';
+                echo '<td>'.$donnees['EndingDate'].'</td>';
+                echo '<td>'.$donnees['Department'].'</td>';
+                echo '<td><a href = "requests.php?type=offer&id='.$donnees['Id'].'">Je demande</a></td>';
                 echo '</tr>';
             }
             echo '</table>';

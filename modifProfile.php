@@ -19,7 +19,7 @@ session_start();
         <h1><a href="index.php" class="">Yardim</a></h1>
     </div>
     <div class="description pull-left col-xs-7 hidden-xs">
-        <h4><em>Le site d'aide a la personne pour les etudiants</em></h4>
+        <h4><em>Le site d'aide a la personne par des etudiants benevoles</em></h4>
     </div>
     <div class="connect pull-right col-xs-4">
         <?php

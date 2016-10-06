@@ -19,7 +19,7 @@ session_start();
         <h1><a href="index.php" class="">Yardim</a></h1>
     </div>
     <div class="description pull-left col-xs-7 hidden-xs">
-        <h4><em>Le site d'aide a la personne pour les etudiants</em></h4>
+        <h4><em>Le site d'aide a la personne par des etudiants benevoles</em></h4>
     </div>
     <div class="connect pull-right col-xs-4">
         <?php
@@ -34,63 +34,63 @@ session_start();
             {
                 echo "<span class=\"pull-right\" >Bienvenue " . $_SESSION['datas']['Nickname'] . "&nbsp;";
             }
-            if(!$_SESSION['datas']['Admin']=='1')
+            if(!$_SESSION['datas']['Admin']=='1' || true)
             {
                 echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
             }
             if($_SESSION['datas']['Admin']=='1')
             {
-                echo "<a class=\"btn btn-danger\" href=\"admin.php\">Administration</a>";
+                echo " <a class=\"btn btn-danger\" href=\"admin.php\">Administration</a>";
             }
             echo " <a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a></span>";
         } ?>
     </div>
 </div>
-
-<form action="modifProfile.php" method="post">
-<table class="table table-responsive" style="width: 75%;">
-    <tr>
-        <td height="26" colspan="2">Vos informations</td>
-    </tr>
-    <tr>
-        <td>Prénom : </td>
-        <td><?php echo $_SESSION['datas']['Name']?></td>
-    </tr>
-    <tr>
-        <td>Nom : </td>
-        <td><?php echo $_SESSION['datas']['Surname'] ?></td>
-    </tr>
-    <tr>
-        <td>Pseudo : </td>
-        <td><input type="text" name="pseudo" value="<?php echo $_SESSION['datas']['Nickname']?>"></td>
-    </tr>
-    <tr>
-        <td>Date de Naissance : </td>
-        <td><?php echo $_SESSION['datas']['Birthdate'] ?></td>
-    </tr>
-    <tr>
-        <td>Ville : </td>
-        <td><input type="text" name ="city" value="<?php echo $_SESSION['datas']['City'] ?>"></td>
-    </tr>
-    <tr>
-        <td>Département : </td>
-        <td><?php echo $_SESSION['datas']['Department'] ?></td>
-    </tr>
-    <tr>
-        <td>Adresse Email : </td>
-        <td><input type="email" name="email" value="<?php echo $_SESSION['datas']['Mail'] ?>"></td>
-    </tr>
-    <tr>
-        <td>Votre nouveau Mot de Passe : </td>
-        <td><input type="password" name="pass" value=""></td>
-    </tr>    <tr>
-        <td>Votre Confirmation de Mot de Passe : </td>
-        <td><input type="password" name="pass_conf" value=""></td>
-    </tr>
-</table>
-
-    <input type="submit" name="modifProf" value="Modifier votre Profil">
-</form>
-
+<div class="col-xs-2"></div>
+<div class="col-lg-8 ">
+    <form action="modifProfile.php" method="post">
+        <table class="table table-responsive">
+            <tr>
+                <td height="26" colspan="2">Vos informations</td>
+            </tr>
+            <tr>
+                <td>Prénom : </td>
+                <td><?php echo $_SESSION['datas']['Name']?></td>
+            </tr>
+            <tr>
+                <td>Nom : </td>
+                <td><?php echo $_SESSION['datas']['Surname'] ?></td>
+            </tr>
+            <tr>
+                <td>Pseudo : </td>
+                <td><input style="width: 100%;" type="text" name="pseudo" value="<?php echo $_SESSION['datas']['Nickname']?>"></td>
+            </tr>
+            <tr>
+                <td>Date de Naissance : </td>
+                <td><?php echo $_SESSION['datas']['Birthdate'] ?></td>
+            </tr>
+            <tr>
+                <td>Ville : </td>
+                <td><input style="width: 100%;" type="text" name ="city" value="<?php echo $_SESSION['datas']['City'] ?>"></td>
+            </tr>
+            <tr>
+                <td>Département : </td>
+                <td><?php echo $_SESSION['datas']['Department'] ?></td>
+            </tr>
+            <tr>
+                <td>Adresse Email : </td>
+                <td><input style="width: 100%;" type="email" name="email" value="<?php echo $_SESSION['datas']['Mail'] ?>"></td>
+            </tr>
+            <tr>
+                <td>Votre nouveau Mot de Passe : </td>
+                <td><input style="width: 100%;" type="password" name="pass" value=""></td>
+            </tr>    <tr>
+                <td>Votre Confirmation de Mot de Passe : </td>
+                <td><input style="width: 100%;" type="password" name="pass_conf" value=""></td>
+            </tr>
+        </table>
+        <input class="btn btn-info" type="submit" name="modifProf" value="Modifier votre Profil">
+    </form>
+</div>
 </body>
 </html>
