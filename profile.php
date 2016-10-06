@@ -49,7 +49,7 @@ session_start();
     </tr>
     <tr>
         <td>Prénom : </td>
-        <td><input type="text" value="<?php echo $_SESSION['datas']['Name']?>"></td>
+        <td><?php echo $_SESSION['datas']['Name']?></td>
     </tr>
     <tr>
         <td>Nom : </td>
@@ -57,7 +57,7 @@ session_start();
     </tr>
     <tr>
         <td>Pseudo : </td>
-        <td><?php echo $_SESSION['datas']['Nickname'] ?></td>
+        <td><input type="text" value="<?php echo $_SESSION['datas']['Nickname'] ?>"></td>
     </tr>
     <tr>
         <td>Date de Naissance : </td>
@@ -65,7 +65,7 @@ session_start();
     </tr>
     <tr>
         <td>Ville : </td>
-        <td><?php echo $_SESSION['datas']['City'] ?></td>
+        <td><input type="text" value="<?php echo $_SESSION['datas']['City'] ?>"></td>
     </tr>
     <tr>
         <td>Département : </td>
@@ -73,8 +73,16 @@ session_start();
     </tr>
     <tr>
         <td>Adresse Email : </td>
-        <td><?php echo $_SESSION['datas']['Mail'] ?></td>
+        <td><input type="email" value="<?php echo $_SESSION['datas']['Mail'] ?>"></td>
     </tr>
+    <tr>
+        <td>Mot de Passe : </td>
+        <td><input type="password" value="<?php echo $_SESSION['datas']['Password'] ?>"></td>
+    </tr>    <tr>
+        <td>Confirmation de Mot de Passe : </td>
+        <td><input type="password" value="<?php echo $_SESSION['datas']['Password'] ?>"></td>
+    </tr>
+
     <tr>
         <td><button class="btn btn-info"><a href="modifProfile.php">Modifier vos informations</a></button></td>
     </tr>
