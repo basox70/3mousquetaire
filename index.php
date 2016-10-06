@@ -71,7 +71,7 @@ session_start();
                         <select class="form-control">
                             <option value="Ville">Toutes Villes</option>
                             <?php
-                            $cities = $bdd->query("SELECT DISTINCT(City) FROM Requests UNION SELECT DISTINCT(City) FROM User");
+                            $cities = $bdd->query("SELECT DISTINCT(City) FROM Requests UNION SELECT DISTINCT(City) FROM User UNION SELECT DISTINCT(City) FROM Offers");
                             while ($city = $cities->fetch()) {
                                 echo "<option value=".$city['City'].">".$city['City']."</option>";
                             }
