@@ -13,17 +13,18 @@ session_start();
     </head>
     <body>
         <div class="page-header">
+            <div class="pull-left hidden-xs col-xs-4">&nbsp;</div>
             <?php
             if($_SESSION && $_SESSION['datas']['Admin']=='1')
             {
                 echo "<a class=\"admin\" href\"admin.php\">Administration</a>";
             }
             ?>
-            <div class="image"><img src="img/logo-simple.png"></div>
+            <div class="pull-left hidden-xs image"><img src="img/logo-simple.png"></div>
             <div class="banner">
                 <h1><a href="index.php" class="">Yardim</a></h1>
             </div>
-            <div class="description">
+            <div class="description pull-left col-xs-7 hidden-xs">
                 <h4><em>Le site d'aide a la personne pour les etudiants</em></h4>
             </div>
             <div class="connect">
