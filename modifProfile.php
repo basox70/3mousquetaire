@@ -14,12 +14,6 @@ session_start();
 <body>
 <div class="page-header">
     <div class="pull-left hidden-xs col-xs-4">&nbsp;</div>
-    <?php
-    if($_SESSION && $_SESSION['datas']['Admin']=='1')
-    {
-        echo "<a class=\"admin\" href\"admin.php\">Administration</a>";
-    }
-    ?>
     <div class="pull-left hidden-xs image"><img src="img/logo-simple.png"></div>
     <div class="banner">
         <h1><a href="index.php" class="">Yardim</a></h1>
@@ -43,6 +37,10 @@ session_start();
             if(!$_SESSION['datas']['Admin']=='1')
             {
                 echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
+            }
+            if($_SESSION['datas']['Admin']=='1')
+            {
+                echo "<a class=\"btn btn-danger\" href=\"admin.php\">Administration</a>";
             }
             echo " <a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a></span>";
         } ?>
@@ -68,28 +66,39 @@ echo $pass;
 echo $pass_conf;
 
 // Insertion
-$req = $bdd->prepare('Update User SET Nickname = ":pseudo", City = ":city", Mail = ":mail", Password = ":password" WHERE Id = :id');
+$req = $bdd->prepare('Update User SET Nickname = :pseudo, City = :city, Mail = :mail, Password = :pass WHERE Id = :id');
+$req2 = $bdd->prepare('Update User SET Nickname = :pseudo, City = :city, Mail = :mail WHERE Id = :id');
 
-print_r($req);
 
-    if($pass_hache == $pass_hache2) {
+    if($pass != null && $pass_conf != null)
+    {
+        if ($pass_hache == $pass_hache2) {
+            $req->execute(array(
+                'id' => $_SESSION['datas']['Id'],
+                'pseudo' => $pseudo,
+                'city' => $city,
+                'mail' => $email,
+                'pass' => $pass_hache
+            ));
 
-        $req->execute(array(
-            'id' => $_SESSION['datas']['Id'],
-            'pseudo' => $pseudo,
-            'city' => $city,
-            'mail' => $email,
-            'password' => $pass_hache
-        ));
-
-        echo "Vos informations ont été modifié avec Succès ! ";
-
-        print_r($req);
+            echo "Vos informations ont été modifié avec Succès ! ";
+            echo "<a href='function.php?deconnect=true'> Reconnectez-vous pour que vos changements prennent effets.</a>";
+        } else {
+            echo 'Les Mots de passes ne concordent pas. Veuillez Réessayer.';
+            echo '<a href = "profile.php">Retour à votre Profil </a>';
+        }
     }
     else
     {
-        echo 'Les Mots de passes ne concordent pas. Veuillez Réessayer.';
-        echo '<a href = "profile.php">Retour à votre Profil </a>';
+        $req2->execute(array(
+            'id' => $_SESSION['datas']['Id'],
+            'pseudo' => $pseudo,
+            'city' => $city,
+            'mail' => $email
+        ));
+
+        echo "Vos informations ont été modifié avec Succès ! ";
+        echo "<a href='function.php?deconnect=true'> Reconnectez-vous pour que vos changements prennent effets.</a>";
     }
 
 
