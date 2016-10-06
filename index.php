@@ -91,8 +91,9 @@ session_start();
             <?php
 
             $reponse = $bdd->query('SELECT * FROM Requests');
+            echo '<div style="width: 75*; height:400px; overflow:auto;">';
             echo '<table class="table table-bordered" style="width: 75%;">';
-            echo '<thead style="display:block">';
+            echo '<thead>';
             echo '<tr>';
             echo '<th></th>';
             echo '<th>Titre</th>';
@@ -105,7 +106,7 @@ session_start();
 
             while($donnees = $reponse->fetch())
             {
-                echo '<tr style="overflow:auto;">';
+                echo '<tr>';
                 echo '<td>'.$donnees['Id'].'</td>';
                 echo '<td>'.$donnees['Title'].'</td>';
                 echo '<td>'.$donnees['Description'].'</td>';
@@ -115,6 +116,7 @@ session_start();
                 echo '</tr>';
             }
             echo '</table>';
+            echo'</div>';
             ?>
         </div>
     </body>
