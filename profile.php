@@ -43,7 +43,7 @@ session_start();
     </div>
 </div>
 
-<table class="table table-responsive" width="75%">
+<table class="table table-responsive" style="width: 75%;">
     <tr>
         <td height="26" colspan="2">Your Profile Information </td>
     </tr>
