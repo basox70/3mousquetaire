@@ -62,7 +62,7 @@ session_start();
     </tr>
     <tr>
         <td>Pseudo : </td>
-        <td><input type="text" name="pseudo" value="<?php echo $_SESSION['datas']['Nickname'] ?>"></td>
+        <td><input type="text" name="pseudo" value="" <?php echo $_SESSION['datas']['Nickname']?>></td>
     </tr>
     <tr>
         <td>Date de Naissance : </td>
@@ -70,7 +70,7 @@ session_start();
     </tr>
     <tr>
         <td>Ville : </td>
-        <td><input type="text" name ="city" value=""><?php echo $_SESSION['datas']['City'] ?></td>
+        <td><input type="text" name ="city" value="" <?php echo $_SESSION['datas']['City'] ?>></td>
     </tr>
     <tr>
         <td>Département : </td>
@@ -78,7 +78,7 @@ session_start();
     </tr>
     <tr>
         <td>Adresse Email : </td>
-        <td><input type="email" name="email" value=""><?php echo $_SESSION['datas']['Mail'] ?></td>
+        <td><input type="email" name="email" value="" <?php echo $_SESSION['datas']['Mail'] ?>></td>
     </tr>
     <tr>
         <td>Votre nouveau Mot de Passe : </td>
