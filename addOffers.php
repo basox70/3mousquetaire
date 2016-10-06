@@ -12,29 +12,40 @@ session_start();
 </head>
 <body>
 <div class="page-header">
-    <?php
-    if(session_id() && $_SESSION['datas']['Admin']=='1')
-    {
-        echo "<a class=\"admin\" href\"admin.php\">Administration</a>";
-    }
-    ?>
-    <div class="image"><img src="img/logo-simple.png"></div>
-    <div class="banner">
-        <h1><a href="index.php" class="">Yardim</a></h1>
-    </div>
-    <div class="description">
-        <h4><em>Le site d'aide a la personne pour les etudiants</em></h4>
-    </div>
-    <div class="connect">
+        <div class="pull-left hidden-xs col-xs-4">&nbsp;</div>
         <?php
-        if(!$_SESSION)
-        { echo "<a class=\"btn btn-primary\" href='connect.php'>Connexion</a> <a class=\"btn btn-primary\" href=\"register.php\">Inscription</a>"; }
-        else
+        if($_SESSION && $_SESSION['datas']['Admin']=='1')
         {
-            echo "Bienvenue ".$_SESSION['datas']['Name'];
-            echo " <a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a>";
-        } ?>
-    </div>
+                echo "<a class=\"admin\" href\"admin.php\">Administration</a>";
+        }
+        ?>
+        <div class="pull-left hidden-xs image"><img src="img/logo-simple.png"></div>
+        <div class="banner">
+                <h1><a href="index.php" class="">Yardim</a></h1>
+        </div>
+        <div class="description pull-left col-xs-7 hidden-xs">
+                <h4><em>Le site d'aide a la personne pour les etudiants</em></h4>
+        </div>
+        <div class="connect pull-right col-xs-4">
+                <?php
+                if(!$_SESSION)
+                { echo " <span class=\"pull-right\"><a class=\"btn btn-primary\" href='connect.php'>Se connecter</a>&nbsp;<a class=\"btn btn-primary\" href=\"register.php\">S'inscrire</a></span>"; }
+                else
+                {
+                        if($_SESSION['datas']['Nickname']== null)
+                        {
+                                echo "<span class=\"pull-right\" >Bienvenue " . $_SESSION['datas']['Name'] . "&nbsp;";
+                        }else
+                        {
+                                echo "<span class=\"pull-right\" >Bienvenue " . $_SESSION['datas']['Nickname'] . "&nbsp;";
+                        }
+                        if(!$_SESSION['datas']['Admin']=='1')
+                        {
+                                echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
+                        }
+                        echo " <a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a></span>";
+                } ?>
+        </div>
 </div>
     <div>
         <?php

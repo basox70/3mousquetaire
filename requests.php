@@ -32,7 +32,13 @@ include('Config.php');
                 { echo " <span class=\"pull-right\"><a class=\"btn btn-primary\" href='connect.php'>Se connecter</a>&nbsp;<a class=\"btn btn-primary\" href=\"register.php\">S'inscrire</a></span>"; }
                 else
                 {
-                    echo "<span class=\"pull-right\" >Bienvenue ".$_SESSION['datas']['Name']."&nbsp;";
+                    if($_SESSION['datas']['Nickname']== null)
+                    {
+                        echo "<span class=\"pull-right\" >Bienvenue " . $_SESSION['datas']['Name'] . "&nbsp;";
+                    }else
+                    {
+                        echo "<span class=\"pull-right\" >Bienvenue " . $_SESSION['datas']['Nickname'] . "&nbsp;";
+                    }
                     if(!$_SESSION['datas']['Admin']=='1')
                     {
                         echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
