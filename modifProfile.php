@@ -78,6 +78,7 @@ $req2 = $bdd->prepare('Update User SET Nickname = :pseudo, City = :city, Mail = 
                 'pseudo' => $pseudo,
                 'city' => $city,
                 'mail' => $email,
+                'pass' => $pass_hache
             ));
 
             echo "Vos informations ont été modifié avec Succès ! ";
@@ -93,8 +94,7 @@ $req2 = $bdd->prepare('Update User SET Nickname = :pseudo, City = :city, Mail = 
             'id' => $_SESSION['datas']['Id'],
             'pseudo' => $pseudo,
             'city' => $city,
-            'mail' => $email,
-            'pass' => $pass_hache
+            'mail' => $email
         ));
 
         echo "Vos informations ont été modifié avec Succès ! ";
