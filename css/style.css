@@ -16,11 +16,6 @@ html
     font-family: '');
     src: url('');*/
 }
-.admin
-{
-    position: fixed;
-    margin: 20px 0px 0 50em;
-}
 .page-header
 {
     margin : -20px 0px 20px;

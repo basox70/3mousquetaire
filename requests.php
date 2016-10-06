@@ -49,7 +49,7 @@ include('Config.php');
         </div>
         <div>
             <?php
-            echo $_GET['id']; // Récupération de l'ID dans l'URL
+            //echo $_GET['id']; // Récupération de l'ID dans l'URL
             $reponse = $bdd->query('SELECT * FROM Requests WHERE Id ='.$_GET['id']);
             $category = $bdd->query('SELECT * FROM Category c, Requests r WHERE c.Id = r.IdCategory');
 
@@ -72,7 +72,7 @@ include('Config.php');
                 echo '<div class="row">';
                     echo '<div class="col-sm-1"></div>';
                     echo '<div class="col-sm-3">Catégorie</div>';
-                    echo '<td>'.$cat['Name'].'</td>';
+                    echo '<div class="col-sm-6">'.$cat['Name'].'</div>';
                 echo '</div>';
 
                 echo '<div class="row">';
@@ -93,9 +93,9 @@ include('Config.php');
                     echo '<div class="col-sm-6">'.$donnees['Nickname'].'</div>';
                 echo '</div>'; ?>
 
-                <button class="btn btn-success"><a href="mailto:".<?php $donnees['Mail']?> ">J\'envoie</a></button>
+                <a class="btn btn-success" href="mailto:".<?php $donnees['Mail']?> ">J'envoie</a></a>
             <?php
-                echo '<button class="btn btn-warning"><a href="index.php">Page Précedente</a></button>';
+                echo '<a class="btn btn-primary" href="index.php">Page Précedente</a>';
             }
             echo '</div>';
             ?>
