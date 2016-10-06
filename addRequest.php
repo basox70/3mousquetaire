@@ -35,7 +35,7 @@ include "Config.php";
             }
             ?>
 
-                    </select>
+                    </select><br />
         A effectuer pour le : <input type="date" name="date" value=""><br />
         Email : <input type="email" name="email" value=""><br />
         Numéro de téléphone : * <input type="text" size="10" name="number" value=""><br />
