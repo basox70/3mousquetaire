@@ -49,7 +49,7 @@ session_start();
             </div>
 
             <div class = "button_student_offers">
-                <a class="btn btn-default" href="#">Etudiant ? Postez votre offre .. </a>
+                <a class="btn btn-default" href="addOffers.php">Etudiant ? Postez votre offre .. </a>
             </div>
 
             <div class="search">
