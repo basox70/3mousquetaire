@@ -6,14 +6,15 @@ session_start();
     <head>
         <meta charset="utf-8"/>
         <title>Yardim - Accueil</title>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/normalize.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     </head>
     <body>
         <div class="page-header">
             <?php
-            if(session_id() && $_SESSION['datas']['Admin']=='1')
+            if($_SESSION && $_SESSION['datas']['Admin']=='1')
             {
                 echo "<a class=\"admin\" href\"admin.php\">Administration</a>";
             }
@@ -28,10 +29,14 @@ session_start();
             <div class="connect">
             <?php
             if(!$_SESSION)
-            { echo "<a class=\"btn btn-primary\" href='connect.php'>Connexion</a> <a class=\"btn btn-primary\" href=\"register.php\">Inscription</a>"; }
+            { echo "<a class=\"btn btn-primary\" href='connect.php'>Se connecter</a> <a class=\"btn btn-primary\" href=\"register.php\">S'inscrire</a>"; }
             else
             {
                 echo "Bienvenue ".$_SESSION['datas']['Name'];
+                if(!$_SESSION['datas']['Admin']=='1')
+                {
+                    echo " <a class=\"btn btn-primary\" href=\"profile.php\" >Profil</a>";
+                }
                 echo " <a class=\"btn btn-warning\" href='function.php?deconnect=true' >Deconnexion</a>";
             } ?>
             </div>
@@ -39,11 +44,11 @@ session_start();
         <div>
 
             <div class = "button_add_request">
-                <button class ="btn btn-default"><a href = "addRequest.php">Ajouter une annonce .. </a></button>
+                <a class="btn btn-default" href="addRequest.php">Ajouter une annonce .. </a>
             </div>
 
             <div class = "button_student_offers">
-                <button class="btn btn-default">Etudiant ? Postez votre offre .. </button>
+                <a class="btn btn-default" href="#">Etudiant ? Postez votre offre .. </a>
             </div>
 
             <div class="search">
@@ -84,7 +89,6 @@ session_start();
             </div>
 
             <?php
-            echo date('Y-m-d');
 
             $reponse = $bdd->query('SELECT * FROM Requests');
             echo '<table class="table table-bordered" style="width: 75%">';
@@ -102,7 +106,6 @@ session_start();
             while($donnees = $reponse->fetch())
             {
                 echo '<tr>';
-
                 echo '<td>'.$donnees['Id'].'</td>';
                 echo '<td>'.$donnees['Title'].'</td>';
                 echo '<td>'.$donnees['Description'].'</td>';
@@ -110,12 +113,9 @@ session_start();
                 echo '<td>'.$donnees['Department'].'</td>';
                 echo '<td><a href = "requests.php?id='.$donnees['Id'].'">J\'y vais</a></td>';
                 echo '</tr>';
-
             }
             echo '</table>';
-
             ?>
-
         </div>
     </body>
 </html>

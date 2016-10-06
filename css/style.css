@@ -18,7 +18,7 @@ html
 }
 .admin
 {
-    position: absolute;
+    position: fixed;
     margin: 20px 0px 0 50em;
 }
 .page-header
@@ -26,6 +26,7 @@ html
     margin : -20px 0px 20px;
     padding: 0 0 40px;
     background-color: #dddddd;
+    height: 140px;
 }
 .banner h1
 {
@@ -44,27 +45,20 @@ html
 }
 .image
 {
-    margin: 2em 0 0 34em;
-    float: left;
-}
-.banner
-{
-    height: 100px;
+    margin-top: 2em;
 }
 .description
 {
-    float: left;
-    margin:0 0 0 -24em;
+    margin-top: -1.5em
 }
 .description h4
 {
-    text-align: center;
     font-family: 'bender-inline';
 }
 .connect
 {
-    float: left;
-    margin: 0 0 0px 21em;
+    margin: 0px 0 0px 80%;
+    position: fixed;
 }
 .search select
 {
