@@ -101,7 +101,7 @@ session_start();
             echo '</tr>';
             echo '</thead>';
 
-            while($donnees = $reponse->fetch() && $cat = $category->fetch())
+            while(($donnees = $reponse->fetch()) && ($cat = $category->fetch()))
             {
                 echo '<tr>';
 
