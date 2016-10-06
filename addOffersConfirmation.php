@@ -23,8 +23,8 @@ include "Config.php";
 
 <?php
 
-$id = $_SESSION['datas']['id'];
-echo $id;
+echo $_SESSION['datas']['Id'];
+
 
 
 $titre = $_POST['title'];
