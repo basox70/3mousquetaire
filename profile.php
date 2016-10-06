@@ -48,32 +48,32 @@ session_start();
         <td height="26" colspan="2">Your Profile Information </td>
     </tr>
     <tr>
-        <td valign="top">>Prénom : </td>
-        <td valign="top"><?php echo $_SESSION['datas']['Name'] ?></td>
+        <td>Prénom : </td>
+        <td><?php echo $_SESSION['datas']['Name'] ?></td>
     </tr>
     <tr>
-        <td valign="top">Nom : </td>
-        <td valign="top"><?php echo $_SESSION['datas']['Surname'] ?></td>
+        <td>Nom : </td>
+        <td><?php echo $_SESSION['datas']['Surname'] ?></td>
     </tr>
     <tr>
-        <td valign="top">Pseudo : </td>
-        <td valign="top"><?php echo $_SESSION['datas']['Nickname'] ?></td>
+        <td>Pseudo : </td>
+        <td><?php echo $_SESSION['datas']['Nickname'] ?></td>
     </tr>
     <tr>
-        <td valign="top">Date de Naissance : </td>
-        <td valign="top"><?php echo $_SESSION['datas']['BirthDate'] ?></td>
+        <td>Date de Naissance : </td>
+        <td><?php echo $_SESSION['datas']['BirthDate'] ?></td>
     </tr>
     <tr>
-        <td valign="top">Ville : </td>
-        <td valign="top"><?php echo $_SESSION['datas']['City'] ?></td>
+        <td>Ville : </td>
+        <td><?php echo $_SESSION['datas']['City'] ?></td>
     </tr>
     <tr>
-        <td valign="top">Département : </td>
-        <td valign="top"><?php echo $_SESSION['datas']['Department'] ?></td>
+        <td>Département : </td>
+        <td><?php echo $_SESSION['datas']['Department'] ?></td>
     </tr>
     <tr>
-        <td valign="top">Adresse Email : </td>
-        <td valign="top"><?php echo $_SESSION['datas']['Mail'] ?></td>
+        <td>Adresse Email : </td>
+        <td><?php echo $_SESSION['datas']['Mail'] ?></td>
     </tr>
 </table>
 
