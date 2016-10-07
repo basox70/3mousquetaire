@@ -90,9 +90,11 @@ session_start()
                     echo '<div class="col-sm-3">Pseudo</div>';
                     echo '<div class="col-sm-6">' . $donnees['Nickname'] . '</div>';
                     echo '</div>';
+
+                    echo '<a class="btn btn-success" href="mailto:'.$donnees['Mail'].'">Je contacte</a> ';
                 }
-                echo '<a class="btn btn-success" href="mailto:'. $donnees['Mail'] .'">Je contacte</a> ';
             }
+
             if($_GET['type'] == "offer") {//echo $_GET['id']; // Récupération de l'ID dans l'URL
                 $reponse = $bdd->query('SELECT * FROM Offers WHERE Id =' . $_GET['id']);
                 $category = $bdd->query('SELECT * FROM Category c, Offers o WHERE c.Id = o.IdCategory ');
@@ -138,7 +140,7 @@ session_start()
                     echo '</div>';
                 }
 
-                echo '<a class="btn btn-success" href="mailto:<?php echo $data[\'Mail\']; ?>">Je contacte</a> ';
+                echo '<a class="btn btn-success" href="mailto:'.$data['Mail'].'">Je contacte</a> ';
             }
                 echo '<a class="btn btn-primary" href="index.php">Page Précedente</a>';
             echo '</div>';
