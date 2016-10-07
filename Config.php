@@ -49,6 +49,7 @@
                 <option value=\"Gers\">Gers</option>
                 <option value=\"Gironde\">Gironde</option>
                 <option value=\"Hérault\">Hérault</option>
+                <option value=\"Ile-de-France\">Ile-de-France</option>
                 <option value=\"Ille-et-Vilaine\">Ille-et-Vilaine</option>
                 <option value=\"Indre\">Indre</option>
                 <option value=\"Indre-et-Loire\">Indre-et-Loire</option>
@@ -73,6 +74,8 @@
                 <option value=\"Morbihan\">Morbihan</option>
                 <option value=\"Moselle\">Moselle</option>
                 <option value=\"Nièvre\">Nièvre</option>
+                <option value=\"Basse Normandie\">Basse Normandie</option>
+                <option value=\"Haute Normandie\">Haute Normandie</option>
                 <option value=\"Nord\">Nord</option>
                 <option value=\"Oise\">Oise</option>
                 <option value=\"Orne\">Orne</option>
