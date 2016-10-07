@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6b2f958-0459-4bc1-bfda-99949adaeddc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requests.php" afterPath="$PROJECT_DIR$/requests.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addOffers.php" afterPath="$PROJECT_DIR$/addOffers.php" />
     </list>
     <ignored path="3mousquetaires.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requests.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="requests.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requests.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+            <state relative-caret-position="498">
+              <caret line="100" column="14" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
               <folding>
                 <marker date="1475824629882" expanded="true" signature="1089:1095" ph=" " />
                 <marker date="1475824629882" expanded="true" signature="1377:1383" ph=" " />
@@ -115,6 +114,23 @@
                 <marker date="1475824629882" expanded="true" signature="4678:4738" ph="SELECT * FRO... Category" />
                 <marker date="1475824629882" expanded="true" signature="4780:4836" ph="SELECT * FRO... User" />
                 <marker date="1475824629882" expanded="true" signature="4896:4914" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addOffers.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/addOffers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-200">
+              <caret line="72" column="126" selection-start-line="72" selection-start-column="126" selection-end-line="72" selection-end-column="126" />
+              <folding>
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1475825264201" expanded="true" signature="1043:1049" ph=" " />
+                <marker date="1475825264201" expanded="true" signature="1367:1373" ph=" " />
+                <marker date="1475825264201" expanded="true" signature="1546:1552" ph=" " />
+                <marker date="1475825264201" expanded="true" signature="3223:3245" ph="SELECT * FRO... Category" />
+                <marker date="1475825264201" expanded="true" signature="3942:3964" ph="SELECT * FRO... Category" />
               </folding>
             </state>
           </provider>
@@ -143,7 +159,6 @@
         <option value="$PROJECT_DIR$/keep.todo" />
         <option value="$PROJECT_DIR$/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/profile.php" />
-        <option value="$PROJECT_DIR$/addOffers.php" />
         <option value="$PROJECT_DIR$/addOffersConfirmation.php" />
         <option value="$PROJECT_DIR$/addRequest.php" />
         <option value="$PROJECT_DIR$/addRequestConfirmation.php" />
@@ -155,6 +170,7 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/requests.php" />
+        <option value="$PROJECT_DIR$/addOffers.php" />
       </list>
     </option>
   </component>
@@ -315,7 +331,7 @@
       <workItem from="1475748076748" duration="28000" />
       <workItem from="1475753387952" duration="12616000" />
       <workItem from="1475777245413" duration="8033000" />
-      <workItem from="1475823542968" duration="1127000" />
+      <workItem from="1475823542968" duration="1721000" />
     </task>
     <task id="LOCAL-00001" summary="Add index.php">
       <created>1475497474503</created>
@@ -356,7 +372,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44758000" />
+    <option name="totallyTimeSpent" value="45352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -763,20 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addOffers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-          <folding>
-            <marker date="1475783449825" expanded="true" signature="1043:1049" ph=" " />
-            <marker date="1475783449825" expanded="true" signature="1367:1373" ph=" " />
-            <marker date="1475783449825" expanded="true" signature="1546:1552" ph=" " />
-            <marker date="1475783449825" expanded="true" signature="3223:3245" ph="SELECT * FRO... Category" />
-            <marker date="1475783449825" expanded="true" signature="3940:3962" ph="SELECT * FRO... Category" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addOffersConfirmation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -958,8 +960,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requests.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="498">
+          <caret line="100" column="14" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
           <folding>
             <marker date="1475824629882" expanded="true" signature="1089:1095" ph=" " />
             <marker date="1475824629882" expanded="true" signature="1377:1383" ph=" " />
@@ -971,6 +973,21 @@
             <marker date="1475824629882" expanded="true" signature="4678:4738" ph="SELECT * FRO... Category" />
             <marker date="1475824629882" expanded="true" signature="4780:4836" ph="SELECT * FRO... User" />
             <marker date="1475824629882" expanded="true" signature="4896:4914" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addOffers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="72" column="126" selection-start-line="72" selection-start-column="126" selection-end-line="72" selection-end-column="126" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1475825264201" expanded="true" signature="1043:1049" ph=" " />
+            <marker date="1475825264201" expanded="true" signature="1367:1373" ph=" " />
+            <marker date="1475825264201" expanded="true" signature="1546:1552" ph=" " />
+            <marker date="1475825264201" expanded="true" signature="3223:3245" ph="SELECT * FRO... Category" />
+            <marker date="1475825264201" expanded="true" signature="3942:3964" ph="SELECT * FRO... Category" />
           </folding>
         </state>
       </provider>

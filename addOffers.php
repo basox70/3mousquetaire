@@ -70,7 +70,7 @@ session_start();
                         <div class="form-group row">
                                 <label class="col-xs-3 col-form-label" for='Description'>Description : </label>
                                 <div class="col-xs-9">
-                                        <textarea class="form-control" type="text" rows="4" cols="600" style="display: block name="description" value=""></textarea><br />
+                                        <textarea class="form-control" type="text" rows="4" cols="600" style="display: block;" name="description" value=""></textarea><br />
                                 </div>
                         </div>
                         <div class="form-group row">
