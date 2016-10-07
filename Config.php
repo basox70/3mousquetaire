@@ -76,6 +76,7 @@
                 <option value=\"Nord\">Nord</option>
                 <option value=\"Oise\">Oise</option>
                 <option value=\"Orne\">Orne</option>
+                <option value=\"Pas-de-Calais\">Pas-de-Calais</option>
                 <option value=\"Paris\">Paris</option>
                 <option value=\"Puy-de-Dôme\">Puy-de-Dôme</option>
                 <option value=\"Pyrénées Atlantiques\">Pyrénées Atlantiques</option>
